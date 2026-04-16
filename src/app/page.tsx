@@ -32,11 +32,16 @@ export default function Home() {
   return (
     <div className="bg-white selection:bg-secondary selection:text-white overflow-x-hidden font-sans text-black" ref={containerRef}>
       
-      {/* 1. POWER HERO: DIRECT & BENEFIT-DRIVEN */}
+      {/* 1. POWER HERO: UK & IRELAND FOCUS */}
       <section className="relative min-h-screen flex items-center bg-slate-950 overflow-hidden py-20">
-        <div className="absolute inset-0 z-0 opacity-20">
-           <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:40px_40px]" />
-           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,_rgba(227,30,36,0.15)_0%,_transparent_60%)]" />
+        <div className="absolute inset-0 z-0">
+           <img 
+             src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2070&auto=format&fit=crop" 
+             alt="Car Transporter" 
+             className="absolute inset-0 w-full h-full object-cover opacity-30 grayscale"
+           />
+           <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent" />
+           <div className="absolute inset-0 bg-grid-white/[0.03] bg-[size:40px_40px]" />
         </div>
 
         <div className="container relative z-10 px-6 mx-auto">
@@ -50,23 +55,23 @@ export default function Home() {
                 <div className="flex items-center gap-4 mb-8">
                    <div className="h-px w-12 bg-secondary" />
                    <span className="text-xs font-bold tracking-[0.3em] text-white/60 uppercase">
-                     Established 1998 • UK & Ireland Coverage
+                     Established 1998 • UK & Ireland Vehicle Logistics
                    </span>
                 </div>
 
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[1.05] tracking-tight uppercase mb-8">
-                  Engineered <br/> 
-                  <span className="text-secondary italic">Vehicle Logistics.</span>
+                  National <br/> 
+                  <span className="text-secondary italic">Logistics Hub.</span>
                 </h1>
 
                 <p className="text-xl md:text-2xl font-medium text-slate-400 mb-12 max-w-2xl leading-relaxed">
-                  A1 Automotive Ltd provides high-capacity transport and secure storage for the UK&apos;s leading manufacturers. We reduce lead times and guarantee zero-defect delivery.
+                  A1 Automotive Ltd provides heavy-duty transport and secure storage for the UK&apos;s leading manufacturers. From our Bathgate hub, we command a fleet of over 80 specialized transporters.
                 </p>
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 border-y border-white/10 py-8">
                    <div>
                       <div className="text-3xl font-black text-white tabular-nums">82</div>
-                      <div className="text-[10px] font-black uppercase tracking-widest text-secondary">Fleet Units</div>
+                      <div className="text-[10px] font-black uppercase tracking-widest text-secondary">UK Fleet Units</div>
                    </div>
                    <div>
                       <div className="text-3xl font-black text-white tabular-nums">12</div>
@@ -93,7 +98,7 @@ export default function Home() {
                  className="bg-white p-8 md:p-12 shadow-2xl border-t-8 border-secondary"
                >
                   <h3 className="text-2xl font-black uppercase mb-2">Get a Rapid Quote</h3>
-                  <p className="text-slate-500 text-sm font-medium mb-8 uppercase tracking-wider">Operational Response within 2 Hours</p>
+                  <p className="text-slate-500 text-sm font-medium mb-8 uppercase tracking-wider">UK & Ireland Response within 2 Hours</p>
                   
                   <form className="space-y-4">
                      <div className="grid grid-cols-2 gap-4">
@@ -116,18 +121,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. THE INFRASTRUCTURE: REAL-WORLD SCALE */}
+      {/* 2. THE INFRASTRUCTURE: BATTGATE HUB */}
       <section id="about" className="py-32 bg-white">
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row gap-24 items-start">
              <div className="lg:w-1/2">
-                <span className="text-xs font-black text-secondary uppercase tracking-[0.8em] mb-8 block text-center lg:text-left">Strategic Infrastructure</span>
+                <span className="text-xs font-black text-secondary uppercase tracking-[0.8em] mb-8 block text-center lg:text-left">Central Infrastructure</span>
                 <h2 className="text-5xl md:text-7xl font-black text-black uppercase tracking-tighter leading-[0.8] mb-12">
-                   The <span className="text-secondary italic">Bathgate</span> Super-Hub.
+                   The <span className="text-secondary italic">Bathgate</span> Nexus.
                 </h2>
                 <div className="space-y-8 mb-12">
                    <p className="text-xl font-bold text-slate-600 leading-relaxed border-l-4 border-secondary pl-8 uppercase tracking-tight">
-                     Centrally located for Scotland and the North of England, our 12-acre facility is the logistical engine for the UK&apos;s premier automotive brands.
+                     Our 12-acre purpose-built storage facility in Central Scotland handles over 2,000 vehicles with 24/7 monitored security.
                    </p>
                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                       <div className="p-6 bg-slate-50 group hover:bg-black transition-colors duration-500">
@@ -135,51 +140,58 @@ export default function Home() {
                             <Shield size={24} strokeWidth={3} />
                             <h4 className="font-black uppercase tracking-tighter text-black group-hover:text-white">Security Elite</h4>
                          </div>
-                         <p className="text-xs font-bold text-slate-400 uppercase tracking-widest group-hover:text-white/40">24/7 CCTV, Perimeter Alarms & On-Site Personnel.</p>
+                         <p className="text-xs font-bold text-slate-400 uppercase tracking-widest group-hover:text-white/40">DVSA Approved & 24/7 Personnel.</p>
                       </div>
                       <div className="p-6 bg-slate-50 group hover:bg-black transition-colors duration-500">
                          <div className="flex items-center gap-3 mb-4 text-secondary">
                             <HardHat size={24} strokeWidth={3} />
                             <h4 className="font-black uppercase tracking-tighter text-black group-hover:text-white">Technical PDI</h4>
                          </div>
-                         <p className="text-xs font-bold text-slate-400 uppercase tracking-widest group-hover:text-white/40">In-house multi-bay suites for manufacturer prep.</p>
+                         <p className="text-xs font-bold text-slate-400 uppercase tracking-widest group-hover:text-white/40">High-capacity prep for UK dealer networks.</p>
                       </div>
                    </div>
                 </div>
                 <Button variant="outline" className="rounded-none border-2 border-black h-16 px-10 font-black tracking-widest text-xs hover:bg-black hover:text-white transition-all w-full lg:w-auto">
-                   VIEW FACILITY SPECIFICATIONS
+                   VIEW HUB SPECIFICATIONS
                 </Button>
              </div>
              <div className="lg:w-1/2 relative">
-                <div className="aspect-video bg-slate-100 border border-slate-200 flex items-center justify-center grayscale">
-                   {/* This is where the aerial hub photo goes */}
-                   <span className="text-slate-300 font-black uppercase tracking-[0.3em] text-sm text-center px-10">
-                     [ High-Resolution Aerial View of 12-Acre Bathgate Hub ]
-                   </span>
+                <div className="aspect-video bg-slate-900 border-8 border-slate-100 shadow-2xl overflow-hidden group">
+                   <img 
+                     src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop" 
+                     alt="Vehicle Storage Facility" 
+                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                   />
                 </div>
                 <div className="mt-4 grid grid-cols-3 gap-4">
-                   <div className="aspect-square bg-slate-100 grayscale hover:grayscale-0 transition-all cursor-pointer border border-black/5" />
-                   <div className="aspect-square bg-slate-100 grayscale hover:grayscale-0 transition-all cursor-pointer border border-black/5" />
-                   <div className="aspect-square bg-slate-100 grayscale hover:grayscale-0 transition-all cursor-pointer border border-black/5" />
+                   <div className="aspect-square bg-slate-100 border border-black/5 overflow-hidden">
+                      <img src="https://images.unsplash.com/photo-1590674899484-13da0d1b58f5?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover grayscale" />
+                   </div>
+                   <div className="aspect-square bg-slate-100 border border-black/5 overflow-hidden">
+                      <img src="https://images.unsplash.com/photo-1620055375841-869f88636b69?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover grayscale" />
+                   </div>
+                   <div className="aspect-square bg-slate-100 border border-black/5 overflow-hidden">
+                      <img src="https://images.unsplash.com/photo-1519003722824-192d992a70df?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover grayscale" />
+                   </div>
                 </div>
              </div>
           </div>
         </div>
       </section>
 
-      {/* 3. TRUST SIGNALS: CASE STUDIES & ACCREDITATIONS */}
+      {/* 3. TRUST SIGNALS: UK PERFORMANCE */}
       <section className="py-32 bg-slate-950 text-white">
         <div className="container mx-auto px-6">
           <div className="mb-20 text-center">
-             <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4">Proven <span className="text-secondary italic">Results.</span></h2>
-             <p className="text-xs font-black uppercase tracking-[0.5em] text-white/40">Market Performance & Trust Signals</p>
+             <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4">Proven <span className="text-secondary italic">Reliability.</span></h2>
+             <p className="text-xs font-black uppercase tracking-[0.5em] text-white/40">National Performance Metrics</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-1">
              {[
-               { title: "OEM Distribution", stat: "5,000+ Units", detail: "Monthly factory-to-hub movements with 99.8% on-time delivery for a major European manufacturer." },
-               { title: "De-Fleet Logistics", stat: "24Hr Turnaround", detail: "Rapid inspection and collection cycles for UK&apos;s largest leasing groups, reducing idle inventory costs." },
-               { title: "Classic & Prototype", stat: "Total Security", detail: "Zero-defect enclosed transport for prototype testing and high-value private collections across Europe." }
+               { title: "OEM Distribution", stat: "5,000+ Units", detail: "Monthly factory-to-hub movements with 99.8% on-time delivery for UK dealer networks." },
+               { title: "Fleet Logistics", stat: "7 Days a Week", detail: "Consistent weekend and holiday coverage for the UK&apos;s largest rental and leasing groups." },
+               { title: "Damage-Free Delivery", stat: "Zero Defects", detail: "Industry-leading quality control for prototype testing and luxury asset transport." }
              ].map((caseStudy, i) => (
                <div key={i} className="bg-white/5 p-12 hover:bg-secondary transition-all duration-700 group cursor-default">
                   <div className="text-xs font-black text-secondary group-hover:text-black mb-8 uppercase tracking-widest">{caseStudy.title}</div>
@@ -197,7 +209,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. THE FLEET: ELITE HARDWARE */}
+      {/* 4. THE FLEET: UK & IRELAND COVERAGE */}
       <section id="fleet" className="py-32 bg-white">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
@@ -205,37 +217,39 @@ export default function Home() {
                 National <br/> <span className="text-secondary italic">Fleet.</span>
              </h2>
              <p className="text-slate-500 font-bold max-w-xs text-right text-sm uppercase tracking-tight leading-relaxed">
-               A high-performance transporter fleet stationed from the North East to the South West.
+               Modern transporters ranging from 1 to 12-car capacity, stationed throughout the UK.
              </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
              {[
-               { t: "12-Car Transporter", d: "High-volume manufacturer trunking." },
-               { t: "6-Car Carrier", d: "Efficient regional dealership distribution." },
-               { t: "Enclosed Unit", d: "High-security transport for luxury assets." },
-               { t: "Single Carrier", d: "Rapid response and private collection." }
+               { t: "12-Car Carrier", d: "High-volume fleet distribution.", img: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=800&auto=format&fit=crop" },
+               { t: "6-Car Transporter", d: "Regional dealer network support.", img: "https://images.unsplash.com/photo-1580674285054-bed31e145f59?q=80&w=800&auto=format&fit=crop" },
+               { t: "Enclosed Secure", d: "High-value and luxury asset transport.", img: "https://images.unsplash.com/photo-1590674899484-13da0d1b58f5?q=80&w=800&auto=format&fit=crop" },
+               { t: "Rapid Asset Unit", d: "Single collections and urgent movements.", img: "https://images.unsplash.com/photo-1519003722824-192d992a70df?q=80&w=800&auto=format&fit=crop" }
              ].map((item, i) => (
-               <div key={i} className="group border border-slate-100 p-10 hover:border-black transition-all">
-                  <div className="aspect-[4/3] bg-slate-100 mb-8 grayscale group-hover:grayscale-0 transition-all flex items-center justify-center">
-                     <Truck className="text-slate-200 group-hover:text-secondary transition-colors" size={40} />
+               <div key={i} className="group border border-slate-100 p-1 bg-white hover:border-black transition-all">
+                  <div className="aspect-[4/3] bg-slate-100 mb-6 grayscale group-hover:grayscale-0 transition-all overflow-hidden">
+                     <img src={item.img} alt={item.t} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   </div>
-                  <h4 className="font-black uppercase tracking-tight text-xl mb-2">{item.t}</h4>
-                  <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">{item.d}</p>
+                  <div className="p-6 pt-0">
+                    <h4 className="font-black uppercase tracking-tight text-lg mb-2">{item.t}</h4>
+                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{item.d}</p>
+                  </div>
                </div>
              ))}
           </div>
         </div>
       </section>
 
-      {/* 5. RECRUITMENT: DRIVING CAREERS */}
+      {/* 5. RECRUITMENT: UK DRIVING CAREERS */}
       <section className="py-32 bg-slate-50 border-y border-slate-200">
          <div className="container mx-auto px-6 text-center">
             <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-8 text-black">
                Drive for <span className="text-secondary italic">A1.</span>
             </h2>
             <p className="text-xl font-bold text-slate-500 uppercase tracking-tight mb-12 max-w-2xl mx-auto">
-               We are recruiting Class 1 HGV Drivers for our national operations. Modern fleet, regional stability, and competitive rates.
+               We are recruiting Class 1 HGV Drivers for our Bathgate-based team. Stable national work, modern Scania fleet, and competitive rates.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
                <Button size="lg" className="rounded-none h-16 px-12 bg-black text-white font-black tracking-widest text-xs hover:bg-secondary">
@@ -249,7 +263,7 @@ export default function Home() {
          </div>
       </section>
 
-      {/* 6. FOOTER/CONTACT: MISSION COMMAND */}
+      {/* 6. CONTACT: REGIONAL HQ */}
       <section id="contact" className="py-32 bg-black text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 text-[30rem] font-black text-white/[0.02] leading-none translate-x-1/2 -translate-y-1/2 select-none pointer-events-none">A1</div>
         <div className="container mx-auto px-6 relative z-10">
@@ -262,17 +276,17 @@ export default function Home() {
                    <div className="space-y-8">
                       <div>
                          <span className="text-[10px] font-black text-secondary uppercase tracking-[0.5em] mb-4 block">Central Terminal</span>
-                         <div className="text-5xl font-black tabular-nums hover:text-secondary transition-colors cursor-pointer">01506 631133</div>
+                         <div className="text-5xl font-black tabular-nums hover:text-secondary transition-colors cursor-pointer text-white">01506 631133</div>
                       </div>
                       <div>
                          <span className="text-[10px] font-black text-secondary uppercase tracking-[0.5em] mb-4 block">Strategic Email</span>
-                         <div className="text-xl font-bold uppercase tracking-tight hover:text-secondary transition-colors cursor-pointer">info@a1automotive.co.uk</div>
+                         <div className="text-xl font-bold uppercase tracking-tight hover:text-secondary transition-colors cursor-pointer text-white">info@a1automotive.co.uk</div>
                       </div>
                    </div>
                    <div className="space-y-8">
                       <div>
                          <span className="text-[10px] font-black text-secondary uppercase tracking-[0.5em] mb-4 block">Regional Headquarters</span>
-                         <p className="text-lg font-bold uppercase tracking-tight leading-tight">
+                         <p className="text-lg font-bold uppercase tracking-tight leading-tight text-white/60">
                             A1 Automotive Ltd<br/>
                             12 Blackburn Road, Bathgate<br/>
                             EH48 2EY, Scotland
@@ -284,7 +298,7 @@ export default function Home() {
                    </div>
                 </div>
              </div>
-             <div className="bg-white p-1 md:p-1">
+             <div className="bg-white p-1">
                 <div className="h-full w-full bg-slate-900 flex flex-col items-center justify-center p-20 text-center group cursor-pointer overflow-hidden relative">
                    <div className="absolute inset-0 bg-secondary translate-x-full group-hover:translate-x-0 transition-transform duration-700" />
                    <h3 className="text-white font-black text-4xl md:text-6xl uppercase tracking-tighter leading-none mb-12 relative z-10">INITIATE <br/> PROPOSAL</h3>
