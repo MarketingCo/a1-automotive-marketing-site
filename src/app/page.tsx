@@ -57,7 +57,7 @@ const SectionReveal = ({ children, direction = "up" }: any) => {
       y: 0, 
       x: 0,
       clipPath: "inset(0% 0% 0% 0%)",
-      transition: { duration: 1, ease: [0.16, 1, 0.3, 1] } 
+      transition: { duration: 1, ease: [0.16, 1, 0.3, 1] as any } 
     }
   };
 
