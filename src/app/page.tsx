@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform, useSpring, useInView } from "framer-motion";
-import { Truck, Warehouse, ShieldCheck, Clock, CheckCircle2, ChevronRight, ArrowRight, Gauge, Globe, Award, Activity, Zap, Shield, BarChart3, Users, Map, Briefcase, Info } from "lucide-react";
+import { Truck, Warehouse, ShieldCheck, Clock, CheckCircle2, ChevronRight, ArrowRight, Gauge, Globe, Award, Activity, Zap, Shield, BarChart3, Users, Map, Briefcase, Info, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
@@ -74,7 +74,7 @@ const revealVariants = {
     opacity: 1, 
     y: 0, 
     skewY: 0,
-    transition: { duration: 1, ease: [0.16, 1, 0.3, 1] } 
+    transition: { duration: 1, ease: [0.16, 1, 0.3, 1] as any } 
   }
 };
 
