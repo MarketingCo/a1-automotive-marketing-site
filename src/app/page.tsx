@@ -43,7 +43,7 @@ const revealVariants = {
     opacity: 1, 
     y: 0, 
     skewY: 0,
-    transition: { duration: 1, ease: [0.16, 1, 0.3, 1] } 
+    transition: { duration: 1, ease: [0.16, 1, 0.3, 1] as any } 
   }
 };
 
@@ -174,8 +174,9 @@ export default function Home() {
                    whileInView={{ opacity: 1, y: 0 }}
                    className="text-7xl md:text-9xl font-black text-black uppercase tracking-tighter leading-[0.8] mb-16"
                 >
-                  12 Acre <br/> <span className="text-secondary">Nexus.</span>
-                </h2>
+                  12 Acre <br/>
+                  <span className="text-secondary">Nexus.</span>
+                </motion.h2>
                 <p className="text-2xl text-black font-bold leading-relaxed mb-12 border-l-4 border-black pl-10">
                   Strategic infrastructure is the backbone of our operations. Our Bathgate facility isn&apos;t just a yard—it&apos;s a precision-engineered logistics hub managing over 2,000 vehicles for the UK&apos;s elite manufacturers.
                 </p>
