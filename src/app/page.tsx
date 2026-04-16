@@ -9,7 +9,7 @@ import { useRef } from "react";
 const stats = [
   { label: "Fleet Vehicles", value: "80+", icon: Truck },
   { label: "Storage Capacity", value: "2,000+", icon: Warehouse },
-  { label: "National Hubs", value: "UK Wide", icon: Globe },
+  { label: "Regional Hubs", value: "UK & Ireland", icon: Globe },
   { label: "Industry Experience", value: "27 Years", icon: Award },
 ];
 
@@ -140,11 +140,11 @@ export default function Home() {
               variants={revealVariants}
               className="relative"
             >
-              <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-10">
+              <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-10 text-black">
                 Strategic <br/> <span className="text-secondary">Infrastructure</span>
               </h2>
-              <p className="text-xl text-slate-600 font-medium leading-relaxed mb-10">
-                Based in Bathgate, Central Scotland, we operate a 12-acre purpose-built facility that functions as the critical link in the UK's automotive supply chain.
+              <p className="text-xl text-black font-medium leading-relaxed mb-10">
+                Based in Bathgate, Central Scotland, we operate a 12-acre purpose-built facility that functions as the critical link in the UK&apos;s automotive supply chain.
               </p>
               
               <div className="grid grid-cols-2 gap-10">
@@ -193,12 +193,12 @@ export default function Home() {
                 Integrated <span className="text-secondary">Solutions</span>
               </h2>
             </div>
-            <p className="text-slate-500 font-medium max-w-sm mb-2">
+            <p className="text-black font-bold max-w-sm mb-2 uppercase tracking-tight">
               Bespoke automotive logistics tailored for high-volume manufacturer requirements and high-value individual transport.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 border-t border-slate-200">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 border-t border-black">
             {services.map((service, i) => (
               <motion.div
                 key={i}
@@ -206,20 +206,20 @@ export default function Home() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={revealVariants}
-                className="group relative p-12 bg-white border-r border-b border-slate-200 hover:bg-black transition-colors duration-500"
+                className="group relative p-12 bg-white border-r border-b border-black/10 hover:bg-black transition-colors duration-500"
               >
-                <div className="text-7xl font-black text-slate-100 group-hover:text-white/5 transition-colors mb-8">
+                <div className="text-7xl font-black text-black/5 group-hover:text-white/5 transition-colors mb-8">
                   {service.id}
                 </div>
                 <h3 className="text-2xl font-black uppercase tracking-tight mb-6 text-black group-hover:text-white transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-slate-500 font-medium leading-relaxed mb-8 group-hover:text-white/60 transition-colors">
+                <p className="text-black/80 font-bold leading-relaxed mb-8 group-hover:text-white/60 transition-colors">
                   {service.description}
                 </p>
                 <ul className="space-y-3 mb-12">
                   {service.features.map((f, j) => (
-                    <li key={j} className="flex items-center gap-3 text-sm font-bold uppercase tracking-tight text-slate-400 group-hover:text-white/80 transition-colors">
+                    <li key={j} className="flex items-center gap-3 text-sm font-black uppercase tracking-tight text-black group-hover:text-white/80 transition-colors">
                       <div className="h-1.5 w-1.5 bg-secondary" />
                       {f}
                     </li>
