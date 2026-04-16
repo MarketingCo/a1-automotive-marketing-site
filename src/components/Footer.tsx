@@ -85,9 +85,13 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-16 border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-bold uppercase tracking-widest">
-          <p>© {new Date().getFullYear()} A1 Automotive Ltd. All rights reserved. Website by <a href="https://marketing-company.co.uk" className="hover:text-secondary transition-colors">Marketing Company</a></p>
-          <div className="flex gap-8">
+        <div className="mt-16 border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-black uppercase tracking-[0.3em]">
+          <p>© {new Date().getFullYear()} A1 Automotive Ltd. All rights reserved.</p>
+          <div className="flex items-center gap-8">
+            <Link href="https://marketing-company.co.uk" className="text-secondary hover:text-white transition-colors">
+              MADE BY MARKETING COMPANY
+            </Link>
+            <div className="h-4 w-px bg-white/10 hidden md:block" />
             <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
