@@ -86,7 +86,7 @@ export const Footer = () => {
         </div>
 
         <div className="mt-16 border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-bold uppercase tracking-widest">
-          <p>© {new Date().getFullYear()} A1 Automotive Ltd. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} A1 Automotive Ltd. All rights reserved. Website by <a href="https://marketing-company.co.uk" className="hover:text-secondary transition-colors">Marketing Company</a></p>
           <div className="flex gap-8">
             <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>

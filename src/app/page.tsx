@@ -1,185 +1,274 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Truck, Warehouse, ShieldCheck, Clock, CheckCircle2, ChevronRight, MapPin } from "lucide-react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Truck, Warehouse, ShieldCheck, Clock, CheckCircle2, ChevronRight, ArrowRight, Gauge, Globe, Award } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
+import { useRef } from "react";
+
+const stats = [
+  { label: "Fleet Vehicles", value: "80+", icon: Truck },
+  { label: "Storage Capacity", value: "2,000+", icon: Warehouse },
+  { label: "National Hubs", value: "UK Wide", icon: Globe },
+  { label: "Industry Experience", value: "27 Years", icon: Award },
+];
 
 const services = [
   {
-    title: "Vehicle Transport",
-    description: "National coverage with a fleet of 80+ transporters. From single collections to large-scale fleet movements.",
+    id: "01",
+    title: "National Vehicle Transport",
+    description: "Specialized logistics ranging from high-value single vehicle movements to massive manufacturer fleet distribution across the UK and Ireland.",
+    features: ["Enclosed Transport Available", "Real-time Tracking", "Fully Insured"],
     icon: Truck,
   },
   {
-    title: "Vehicle Storage",
-    description: "12-acre purpose-built facility in Bathgate with capacity for over 2,000 vehicles.",
+    id: "02",
+    title: "Secure Vehicle Storage",
+    description: "A 12-acre high-security hub in Central Scotland, purpose-built for manufacturer-standard storage and inventory management.",
+    features: ["24/7 Monitoring", "De-Fleet Ready", "Bonded Facility"],
     icon: Warehouse,
   },
   {
-    title: "PDI & Defleet",
-    description: "Comprehensive Pre-Delivery Inspections and efficient defleet collection services.",
+    id: "03",
+    title: "Technical PDI & Defleet",
+    description: "Comprehensive technical inspections, vehicle preparation, and end-of-lease management with precision reporting.",
+    features: ["Manufacturer Standards", "Rapid Turnaround", "Digital Reporting"],
     icon: ShieldCheck,
   },
 ];
 
-const features = [
-  "National UK Coverage",
-  "80+ Modern Transporters",
-  "2,000+ Vehicle Storage Capacity",
-  "Proven Reliability Since 1998",
-  "PDI & Defleet Expertise",
-  "7 Days a Week Operation",
-];
+const revealVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } 
+  }
+};
 
 export default function Home() {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"]
+  });
+
   return (
-    <div className="flex flex-col gap-20 pb-20">
-      {/* Hero Section */}
-      <section className="relative h-[90vh] min-h-[600px] w-full overflow-hidden bg-white flex items-center">
-        {/* Background Overlay Pattern */}
-        <div className="absolute inset-0 z-0 opacity-5 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-secondary/20 via-transparent to-transparent" />
-        <div className="absolute inset-0 z-0 bg-grid-black/[0.02] bg-[length:50px_50px]" />
+    <div className="bg-white selection:bg-secondary selection:text-white overflow-x-hidden" ref={containerRef}>
+      
+      {/* Cinematic Hero Section */}
+      <section className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden bg-black">
+        {/* Abstract Architectural Background Elements */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_30%,_rgba(227,30,36,0.1)_0%,_transparent_50%)]" />
+          <div className="absolute inset-0 bg-grid-white/[0.03] bg-[length:60px_60px]" />
+          <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_70%,_rgba(255,255,255,0.05)_0%,_transparent_50%)]" />
+        </div>
 
-        <div className="container relative z-10 mx-auto px-4">
-          <div className="max-w-4xl space-y-8">
+        {/* Floating Decorative Elements */}
+        <motion.div 
+          style={{ y: useTransform(scrollYProgress, [0, 1], [0, 200]) }}
+          className="absolute -right-20 top-1/4 text-[25rem] font-black text-white/[0.02] leading-none select-none"
+        >
+          A1
+        </motion.div>
+
+        <div className="container relative z-10 px-4">
+          <div className="max-w-5xl">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial="hidden"
+              animate="visible"
+              variants={{
+                visible: { transition: { staggerChildren: 0.2 } }
+              }}
             >
-              <div className="flex items-center gap-3 mb-6">
-                 <div className="h-[2px] w-12 bg-secondary" />
-                 <span className="text-sm font-bold tracking-[0.2em] text-black uppercase">
-                   Established 1998
-                 </span>
-              </div>
-              <h1 className="text-6xl font-black tracking-tighter text-black md:text-8xl lg:text-9xl leading-[0.8] uppercase">
-                A<span className="text-secondary">1</span> <br/>
-                <span className="text-4xl md:text-6xl lg:text-7xl">Automotive</span>
+              <motion.div variants={revealVariants} className="flex items-center gap-4 mb-8">
+                <span className="h-px w-16 bg-secondary" />
+                <span className="text-sm font-black tracking-[0.4em] text-white/60 uppercase">
+                  Logistics Excellence Since 1998
+                </span>
+              </motion.div>
+
+              <motion.h1 
+                variants={revealVariants}
+                className="text-7xl md:text-9xl font-black text-white leading-[0.85] tracking-tighter uppercase mb-12"
+              >
+                Precision <br/> 
+                <span className="text-secondary">In Motion.</span>
               </h1>
-              <p className="mt-8 text-xl font-bold tracking-tight text-black uppercase border-l-4 border-secondary pl-6">
-                Leading UK Vehicle <br/> Transport & Storage
-              </p>
-            </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex flex-wrap gap-4"
-            >
-              <Button size="lg" variant="secondary" className="rounded-none px-10 font-bold h-14 text-base">
-                GET A QUOTE
-              </Button>
-              <Button size="lg" variant="outline" className="rounded-none px-10 font-bold h-14 text-base border-black hover:bg-black hover:text-white">
-                OUR SERVICES
-              </Button>
+              <motion.p 
+                variants={revealVariants}
+                className="max-w-2xl text-xl md:text-2xl font-medium text-white/50 mb-12 border-l-4 border-secondary pl-8 leading-relaxed"
+              >
+                A1 Automotive Ltd orchestrates large-scale vehicle logistics for the world's premier automotive brands. Reliability is our only standard.
+              </motion.p>
+
+              <motion.div variants={revealVariants} className="flex flex-wrap gap-6">
+                <Button size="lg" variant="secondary" className="rounded-none h-20 px-12 text-lg font-black tracking-widest group">
+                  EXPLORE SOLUTIONS
+                  <ArrowRight className="ml-3 group-hover:translate-x-2 transition-transform" />
+                </Button>
+                <Button size="lg" variant="outline" className="rounded-none h-20 px-12 text-lg font-black tracking-widest text-white border-white/20 hover:bg-white/10">
+                  OUR FLEET
+                </Button>
+              </motion.div>
             </motion.div>
           </div>
         </div>
+
+        {/* Scroll Indicator */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5, duration: 1 }}
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
+        >
+          <div className="w-px h-16 bg-gradient-to-b from-transparent via-white/20 to-white/60" />
+          <span className="text-[10px] font-black uppercase tracking-[0.5em] text-white/40">Scroll</span>
+        </motion.div>
       </section>
 
-      {/* Services Grid */}
-      <section id="services" className="container mx-auto px-4">
-        <div className="mb-16">
-          <h2 className="text-4xl font-black tracking-tighter uppercase md:text-6xl">
-            Core <span className="text-secondary">Services</span>
-          </h2>
-          <div className="mt-4 h-1 w-24 bg-black" />
-        </div>
-
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
-          {services.map((service, index) => (
+      {/* Corporate Identity & Scale */}
+      <section className="py-32 bg-white relative">
+        <div className="container px-4 mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative border-l-2 border-slate-100 pl-8 transition-all hover:border-secondary"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={revealVariants}
+              className="relative"
             >
-              <div className="mb-6 inline-flex h-12 w-12 items-center justify-center text-secondary">
-                <service.icon className="h-10 w-10" strokeWidth={1.5} />
-              </div>
-              <h3 className="mb-4 text-2xl font-black uppercase tracking-tight">{service.title}</h3>
-              <p className="text-slate-500 leading-relaxed font-medium">{service.description}</p>
-              <Link href="#" className="mt-8 inline-flex items-center text-xs font-black uppercase tracking-widest text-secondary hover:translate-x-2 transition-transform">
-                Read More <ChevronRight className="ml-1 h-4 w-4" />
-              </Link>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
-      {/* Stats Section with Bold Branding */}
-      <section id="about" className="bg-black py-24 text-white overflow-hidden relative">
-        <div className="absolute top-0 right-0 text-[20rem] font-black text-white/[0.03] leading-none select-none pointer-events-none -translate-y-1/4 translate-x-1/4">
-          A1
-        </div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="flex flex-col gap-16 lg:flex-row lg:items-center">
-            <div className="lg:w-1/2">
-              <h2 className="text-4xl font-black tracking-tighter uppercase md:text-6xl">
-                Unrivalled <span className="text-secondary">Reach</span>
+              <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-10">
+                Strategic <br/> <span className="text-secondary">Infrastructure</span>
               </h2>
-              <p className="mt-8 text-lg text-slate-400 leading-relaxed font-medium">
-                Based in Bathgate, Central Scotland, our 12-acre purpose-built facility 
-                serves as the beating heart of our UK-wide logistics operation. 
-                With over 80 transporters on the road, we move thousands of vehicles 
-                every week for the UK's biggest manufacturers and rental companies.
+              <p className="text-xl text-slate-600 font-medium leading-relaxed mb-10">
+                Based in Bathgate, Central Scotland, we operate a 12-acre purpose-built facility that functions as the critical link in the UK's automotive supply chain.
               </p>
               
-              <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
-                {features.map((feature) => (
-                  <div key={feature} className="flex items-center gap-4 group">
-                    <div className="h-2 w-2 bg-secondary transition-all group-hover:w-4" />
-                    <span className="font-bold text-sm uppercase tracking-wider">{feature}</span>
+              <div className="grid grid-cols-2 gap-10">
+                {stats.map((stat, i) => (
+                  <div key={i} className="group">
+                    <div className="text-4xl font-black text-black mb-2 flex items-center gap-3">
+                      {stat.value}
+                    </div>
+                    <div className="text-xs font-black uppercase tracking-widest text-slate-400 group-hover:text-secondary transition-colors">
+                      {stat.label}
+                    </div>
                   </div>
                 ))}
               </div>
+            </motion.div>
 
-              <Button size="lg" variant="secondary" className="mt-12 rounded-none font-bold px-10">
-                VIEW OUR FLEET
-              </Button>
-            </div>
-            
-            <div className="lg:w-1/2 relative">
-              <div className="relative aspect-video overflow-hidden bg-slate-800 shadow-2xl grayscale transition-all hover:grayscale-0 duration-700">
-                 <div className="flex h-full w-full items-center justify-center text-white/20 uppercase tracking-widest text-sm italic font-bold border-4 border-white/5">
-                    [ Fleet Photography ]
-                 </div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={revealVariants}
+              className="relative aspect-square"
+            >
+              <div className="absolute inset-0 bg-slate-100 border-8 border-slate-50 overflow-hidden">
+                <div className="w-full h-full flex items-center justify-center bg-slate-900 text-white/5 uppercase font-black text-9xl -rotate-12 select-none">
+                  A1 LOGISTICS
+                </div>
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-secondary p-8 hidden md:block">
-                 <div className="text-4xl font-black">27+</div>
-                 <div className="text-xs font-bold uppercase tracking-widest opacity-80">Years Experience</div>
+              <div className="absolute -top-12 -right-12 w-64 h-64 bg-secondary p-10 flex flex-col justify-end hidden xl:flex">
+                <p className="text-white font-black text-2xl leading-tight uppercase">
+                  UK Wide <br/> Distribution <br/> Network
+                </p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section id="contact" className="container mx-auto px-4">
-        <div className="relative overflow-hidden bg-white border-4 border-black px-8 py-16 text-center text-black md:px-16 md:py-24">
-          <div className="absolute top-0 left-0 h-2 w-full bg-secondary" />
-          <h2 className="text-4xl font-black md:text-7xl uppercase tracking-tighter">
-            Get a <span className="text-secondary">Custom</span> Quote
-          </h2>
-          <p className="mx-auto mt-8 max-w-2xl text-lg font-bold text-slate-600 uppercase tracking-tight">
-            Whether it's a single vehicle or an entire fleet, A1 Automotive 
-            has the capacity to respond within hours.
-          </p>
-          <div className="mt-12 flex flex-wrap justify-center gap-6">
-            <Button size="lg" variant="secondary" className="rounded-none px-12 font-bold h-16 text-lg">
-              CONTACT US
-            </Button>
-            <div className="flex flex-col items-center justify-center">
-               <span className="text-xs font-black text-secondary uppercase tracking-[0.3em] mb-1">Direct Line</span>
-               <span className="text-2xl font-black">01506 631133</span>
+      {/* Advanced Service Architecture */}
+      <section id="services" className="py-32 bg-slate-50">
+        <div className="container px-4 mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+            <div className="max-w-2xl">
+              <span className="text-xs font-black text-secondary uppercase tracking-[0.4em] mb-4 block">Core Capabilities</span>
+              <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none">
+                Integrated <span className="text-secondary">Solutions</span>
+              </h2>
             </div>
+            <p className="text-slate-500 font-medium max-w-sm mb-2">
+              Bespoke automotive logistics tailored for high-volume manufacturer requirements and high-value individual transport.
+            </p>
           </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 border-t border-slate-200">
+            {services.map((service, i) => (
+              <motion.div
+                key={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={revealVariants}
+                className="group relative p-12 bg-white border-r border-b border-slate-200 hover:bg-black transition-colors duration-500"
+              >
+                <div className="text-7xl font-black text-slate-100 group-hover:text-white/5 transition-colors mb-8">
+                  {service.id}
+                </div>
+                <h3 className="text-2xl font-black uppercase tracking-tight mb-6 text-black group-hover:text-white transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-slate-500 font-medium leading-relaxed mb-8 group-hover:text-white/60 transition-colors">
+                  {service.description}
+                </p>
+                <ul className="space-y-3 mb-12">
+                  {service.features.map((f, j) => (
+                    <li key={j} className="flex items-center gap-3 text-sm font-bold uppercase tracking-tight text-slate-400 group-hover:text-white/80 transition-colors">
+                      <div className="h-1.5 w-1.5 bg-secondary" />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <Link href="#" className="inline-flex items-center text-xs font-black uppercase tracking-[0.3em] text-secondary hover:translate-x-4 transition-transform">
+                  View Specifications <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industrial Scale CTA */}
+      <section id="contact" className="py-40 bg-white overflow-hidden">
+        <div className="container px-4 mx-auto">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={revealVariants}
+            className="bg-black p-16 md:p-32 relative text-center"
+          >
+            <div className="absolute inset-0 z-0 overflow-hidden">
+               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[30rem] font-black text-white/[0.02] uppercase leading-none select-none">
+                 Contact
+               </div>
+            </div>
+
+            <div className="relative z-10">
+              <h2 className="text-6xl md:text-8xl font-black text-white uppercase tracking-tighter leading-none mb-12">
+                Initiate <br/> <span className="text-secondary">Partnership</span>
+              </h2>
+              <p className="text-xl text-white/50 font-medium max-w-2xl mx-auto mb-16 uppercase tracking-widest leading-relaxed">
+                Experience the precision of the UK's most reliable automotive logistics network.
+              </p>
+              
+              <div className="flex flex-col md:flex-row items-center justify-center gap-12">
+                <Button size="lg" variant="secondary" className="rounded-none h-20 px-16 text-lg font-black tracking-[0.2em] w-full md:w-auto">
+                  REQUEST PROPOSAL
+                </Button>
+                <div className="text-left">
+                  <div className="text-[10px] font-black uppercase tracking-[0.5em] text-secondary mb-2">Corporate Line</div>
+                  <div className="text-3xl font-black text-white tabular-nums">01506 631133</div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
