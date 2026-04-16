@@ -177,7 +177,7 @@ export default function Home() {
             </Button>
             <div className="flex flex-col items-center justify-center">
                <span className="text-xs font-black text-secondary uppercase tracking-[0.3em] mb-1">Direct Line</span>
-               <span className="text-2xl font-black">01506 633333</span>
+               <span className="text-2xl font-black">01506 631133</span>
             </div>
           </div>
         </div>
