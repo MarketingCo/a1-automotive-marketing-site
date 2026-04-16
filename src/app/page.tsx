@@ -42,7 +42,7 @@ const revealVariants = {
   visible: { 
     opacity: 1, 
     y: 0, 
-    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } 
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any } 
   }
 };
 
@@ -93,15 +93,15 @@ export default function Home() {
                 variants={revealVariants}
                 className="text-7xl md:text-9xl font-black text-white leading-[0.85] tracking-tighter uppercase mb-12"
               >
-                Precision <br/> 
+                Precision <br/>
                 <span className="text-secondary">In Motion.</span>
-              </h1>
+              </motion.h1>
 
               <motion.p 
                 variants={revealVariants}
                 className="max-w-2xl text-xl md:text-2xl font-medium text-white/50 mb-12 border-l-4 border-secondary pl-8 leading-relaxed"
               >
-                A1 Automotive Ltd orchestrates large-scale vehicle logistics for the world's premier automotive brands. Reliability is our only standard.
+                A1 Automotive Ltd orchestrates large-scale vehicle logistics for the world&apos;s premier automotive brands. Reliability is our only standard.
               </motion.p>
 
               <motion.div variants={revealVariants} className="flex flex-wrap gap-6">
