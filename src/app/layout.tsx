@@ -1,22 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "A1 Automotive | Vehicle Transport & Storage Solutions",
-  description: "UK leading supplier of vehicle transport and storage solutions. Reliable, efficient, and damage-free delivery since 1998.",
+  title: "A1 Automotive Ltd | UK & Ireland Vehicle Transport & Storage",
+  description: "A leading supplier of vehicle transport and storage solutions in the UK. Operating a modern fleet of over 80 transporters with a 12-acre hub in Bathgate.",
 };
 
 export default function RootLayout({
@@ -26,9 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans`}
-      >
+      <body className="antialiased font-sans">
         <Navbar />
         <main>{children}</main>
         <Footer />
