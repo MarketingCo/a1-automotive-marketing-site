@@ -55,7 +55,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
           >
             <div className="flex items-center gap-5 mb-10">
               <div className="h-px w-16 bg-secondary" />
@@ -115,7 +115,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
             className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8"
           >
             <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-black leading-none">
@@ -133,7 +133,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.6, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 0.6, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
               >
                 <Link href={s.href} className="group block">
                   <div className="bg-[#f9f9f9] p-14 h-full flex flex-col justify-between hover:bg-black transition-colors duration-500 relative overflow-hidden">
@@ -172,7 +172,7 @@ export default function Home() {
               initial={{ opacity: 0, x: -24 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
             >
               <span className="text-[10px] font-black text-secondary uppercase tracking-[0.4em] mb-10 block">
                 The Hub / Bathgate, Scotland
@@ -201,7 +201,7 @@ export default function Home() {
               initial={{ opacity: 0, x: 24 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
             >
               <div className="aspect-square bg-white/5 border border-white/10 flex items-center justify-center p-20 group relative overflow-hidden">
                 <div className="absolute inset-0 bg-secondary scale-y-0 origin-bottom group-hover:scale-y-100 transition-transform duration-600 ease-out" />
@@ -226,7 +226,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
           >
             <h2 className="text-6xl md:text-9xl font-black text-black uppercase tracking-tighter leading-[0.8] mb-16">
               Direct <br />
