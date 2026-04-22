@@ -10,81 +10,73 @@ interface QuoteFormProps {
 }
 
 export const QuoteForm = ({ service = "GENERAL LOGISTICS", dark = false }: QuoteFormProps) => {
+  const inputClass = cn(
+    "w-full px-4 py-3 text-xs font-semibold tracking-wide focus:outline-none transition-colors duration-150 border",
+    dark
+      ? "bg-white/5 border-white/10 text-white placeholder:text-white/30 focus:border-secondary"
+      : "bg-neutral-50 border-neutral-200 text-black placeholder:text-neutral-400 focus:border-secondary"
+  );
+
+  const labelClass =
+    "block text-[10px] font-black uppercase tracking-[0.2em] mb-1.5 " +
+    (dark ? "text-white/40" : "text-neutral-400");
+
   return (
-    <div className={cn(
-      "p-8 md:p-12 shadow-2xl",
-      dark ? "bg-slate-900 border-t-8 border-secondary text-white" : "bg-white border-t-8 border-secondary text-black"
-    )}>
-      <h3 className="text-2xl font-black uppercase mb-2">Request a Quote</h3>
-      <p className={cn("text-xs font-bold uppercase tracking-widest mb-10", dark ? "text-white/40" : "text-slate-400")}>
-        Operational response within 2 hours
+    <div
+      className={cn(
+        "p-8 md:p-10 shadow-xl border-t-4 border-secondary",
+        dark ? "bg-neutral-900 text-white" : "bg-white text-black"
+      )}
+    >
+      <h3 className="text-xl font-black uppercase tracking-tight mb-1">Request a Quote</h3>
+      <p className={cn("text-[10px] font-bold uppercase tracking-[0.2em] mb-8", dark ? "text-white/30" : "text-neutral-400")}>
+        Response within 2 business hours
       </p>
 
-      <form className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="space-y-2">
-            <label className="text-[10px] font-black uppercase tracking-widest opacity-50">Your Name</label>
-            <input 
-              type="text" 
-              className={cn(
-                "w-full p-4 text-xs font-bold tracking-widest focus:outline-none focus:border-secondary transition-colors",
-                dark ? "bg-white/5 border border-white/10 text-white" : "bg-slate-50 border border-slate-200 text-black"
-              )} 
-            />
+      <form className="space-y-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div>
+            <label className={labelClass}>Your Name</label>
+            <input type="text" autoComplete="name" className={inputClass} />
           </div>
-          <div className="space-y-2">
-            <label className="text-[10px] font-black uppercase tracking-widest opacity-50">Company Name</label>
-            <input 
-              type="text" 
-              className={cn(
-                "w-full p-4 text-xs font-bold tracking-widest focus:outline-none focus:border-secondary transition-colors",
-                dark ? "bg-white/5 border border-white/10 text-white" : "bg-slate-50 border border-slate-200 text-black"
-              )} 
-            />
+          <div>
+            <label className={labelClass}>Company Name</label>
+            <input type="text" autoComplete="organization" className={inputClass} />
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="space-y-2">
-            <label className="text-[10px] font-black uppercase tracking-widest opacity-50">Work Email</label>
-            <input 
-              type="email" 
-              className={cn(
-                "w-full p-4 text-xs font-bold tracking-widest focus:outline-none focus:border-secondary transition-colors",
-                dark ? "bg-white/5 border border-white/10 text-white" : "bg-slate-50 border border-slate-200 text-black"
-              )} 
-            />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div>
+            <label className={labelClass}>Work Email</label>
+            <input type="email" autoComplete="email" className={inputClass} />
           </div>
-          <div className="space-y-2">
-            <label className="text-[10px] font-black uppercase tracking-widest opacity-50">Service Type</label>
-            <select 
+          <div>
+            <label className={labelClass}>Service Required</label>
+            <select
               defaultValue={service}
-              className={cn(
-                "w-full p-4 text-[10px] font-bold tracking-widest focus:outline-none focus:border-secondary transition-colors appearance-none",
-                dark ? "bg-white/5 border border-white/10 text-white" : "bg-slate-50 border border-slate-200 text-black"
-              )}
+              className={cn(inputClass, "appearance-none cursor-pointer")}
             >
-              <option value="GENERAL LOGISTICS">GENERAL LOGISTICS</option>
-              <option value="VEHICLE TRANSPORT">VEHICLE TRANSPORT</option>
-              <option value="VEHICLE STORAGE">VEHICLE STORAGE</option>
-              <option value="PDI & DEFLEET">PDI & DEFLEET</option>
+              <option value="GENERAL LOGISTICS">General Logistics</option>
+              <option value="VEHICLE TRANSPORT">Vehicle Transport</option>
+              <option value="VEHICLE STORAGE">Vehicle Storage</option>
+              <option value="PDI & DEFLEET">PDI &amp; Defleet</option>
             </select>
           </div>
         </div>
 
-        <div className="space-y-2">
-          <label className="text-[10px] font-black uppercase tracking-widest opacity-50">Enquiry Details</label>
-          <textarea 
+        <div>
+          <label className={labelClass}>Enquiry Details</label>
+          <textarea
             rows={4}
-            className={cn(
-              "w-full p-4 text-xs font-bold tracking-widest focus:outline-none focus:border-secondary transition-colors",
-              dark ? "bg-white/5 border border-white/10 text-white" : "bg-slate-50 border border-slate-200 text-black"
-            )}
-          ></textarea>
+            className={cn(inputClass, "resize-none")}
+          />
         </div>
 
-        <Button variant="secondary" className="w-full h-20 rounded-none font-black tracking-[0.4em] text-xs">
-          INITIATE REQUEST
+        <Button
+          variant="secondary"
+          className="w-full h-14 rounded-none font-black tracking-[0.2em] text-xs transition-all duration-200 hover:opacity-90 active:scale-[0.99]"
+        >
+          Submit Enquiry
         </Button>
       </form>
     </div>

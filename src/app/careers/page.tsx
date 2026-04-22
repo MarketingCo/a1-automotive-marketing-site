@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Truck, Map, Shield, Clock, CheckCircle2, ArrowRight, Award, Users, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 const benefits = [

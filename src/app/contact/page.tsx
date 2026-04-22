@@ -1,7 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Clock, ArrowRight, ShieldCheck, Award } from "lucide-react";
+import { Phone, Mail, MapPin, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { QuoteForm } from "@/components/QuoteForm";
 

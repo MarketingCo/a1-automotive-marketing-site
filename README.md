@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<!-- HERO BANNER: 1280x640, flat, brand colour, product wordmark only. No screenshots. -->
+<p align="center">
+  <img src="./.github/assets/hero.svg" alt="a1-automotive-marketing-site" width="720">
+</p>
 
-## Getting Started
+<h1 align="center">a1-automotive-marketing-site</h1>
 
-First, run the development server:
+<p align="center">
+  <strong>Connect with automotive customers to increase sales and bookings.</strong>
+</p>
+
+<p align="center">
+  <a href="[TBD]"><img src="[TBD]" alt="Build"></a>
+  <a href="[TBD]"><img src="[TBD]" alt="Version"></a>
+  <a href="[TBD]"><img src="[TBD]" alt="Licence"></a>
+  <a href="[TBD]"><img src="[TBD]" alt="Downloads"></a>
+</p>
+
+<p align="center">
+  <a href="#quick-start">Quick Start</a> ·
+  <a href="#documentation">Documentation</a> ·
+  <a href="#examples">Examples</a> ·
+  <a href="#licence">Licence</a>
+</p>
+
+---
+
+## Overview
+
+This project is a Next.js application. It provides a foundational web structure. It is for developers building React applications.
+
+## Quick Start
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A local development server runs on port 3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Capability | Outcome |
+|---|---|
+| Next.js App Router | Route requests to specific React components. |
 
-## Learn More
+## Installation
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Requires Node.js [TBD]. Nothing else.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Usage
 
-## Deploy on Vercel
+```bash
+npm run build
+npm start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+See [Documentation](#documentation) for the full API.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Documentation
+
+- [Getting Started]([TBD])
+- [API Reference]([TBD])
+- [Guides]([TBD])
+- [Changelog]([TBD])
+
+## Examples
+
+| Example | Description |
+|---|---|
+| [`examples/basic`]([TBD]) | [TBD] |
+
+## Contributing
+
+Read [CONTRIBUTING.md]([TBD]) before opening a pull request.
+
+## Licence
+
+[TBD]. See [LICENCE]([TBD]).
