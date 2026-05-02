@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Truck, Warehouse, ShieldCheck, ArrowRight, Activity } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
+import MagneticButton from "@/components/MagneticButton";
 
 const services = [
   {
@@ -78,16 +79,18 @@ export default function Home() {
                 </p>
               </div>
               <div className="lg:col-span-5">
-                <Link href="/contact">
-                  <Button
-                    size="lg"
-                    variant="secondary"
-                    className="rounded-none h-20 px-14 font-black tracking-[0.2em] text-sm group bg-secondary hover:bg-white hover:text-black transition-all duration-400 w-full lg:w-auto"
-                  >
-                    Request a Proposal
-                    <ArrowRight className="ml-3 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
-                  </Button>
-                </Link>
+                <MagneticButton strength={0.15}>
+                  <Link href="/contact">
+                    <Button
+                      size="lg"
+                      variant="secondary"
+                      className="rounded-none h-20 px-14 font-black tracking-[0.2em] text-sm group bg-secondary hover:bg-white hover:text-black transition-all duration-400 w-full lg:w-auto"
+                    >
+                      Request a Proposal
+                      <ArrowRight className="ml-3 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+                    </Button>
+                  </Link>
+                </MagneticButton>
               </div>
             </div>
           </motion.div>
