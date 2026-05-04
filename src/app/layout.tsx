@@ -32,11 +32,13 @@ export const metadata: Metadata = {
     siteName: "A1 Automotive",
     locale: "en_GB",
     type: "website",
+    images: ["https://www.a1automotive.co.uk/og-image.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "UK Vehicle Transport & Storage | A1 Automotive",
     description: "Specialist vehicle logistics from our HMRC-bonded hub in Bathgate.",
+    images: ["https://www.a1automotive.co.uk/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -52,11 +54,11 @@ export const metadata: Metadata = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://a1-automotive-marketing-site.vercel.app",
+  "@id": "https://www.a1automotive.co.uk",
   name: "A1 Automotive",
   description: "Specialist vehicle transport, storage, and PDI services operating from a 12-acre HMRC-bonded hub in Bathgate, Scotland.",
-  url: "https://a1-automotive-marketing-site.vercel.app",
-  logo: "https://a1-automotive-marketing-site.vercel.app/logo.png",
+  url: "https://www.a1automotive.co.uk",
+  logo: "https://www.a1automotive.co.uk/logo.png",
   telephone: "+441506000000",
   email: "info@a1automotive.co.uk",
   address: {
@@ -75,10 +77,10 @@ const organizationSchema = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://a1-automotive-marketing-site.vercel.app/bathgate",
+  "@id": "https://www.a1automotive.co.uk/bathgate",
   name: "A1 Automotive Bathgate Hub",
   description: "HMRC-bonded vehicle storage and PDI facility in Bathgate, Scotland.",
-  url: "https://a1-automotive-marketing-site.vercel.app",
+  url: "https://www.a1automotive.co.uk",
   telephone: "+441506000000",
   address: {
     "@type": "PostalAddress",
