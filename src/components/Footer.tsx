@@ -99,12 +99,10 @@ export const Footer = () => {
           <p>© {new Date().getFullYear()} A1 Automotive Ltd. All rights reserved.</p>
           <div className="flex items-center gap-6 flex-wrap justify-center">
             <a
-              href="https://marketing-company.co.uk"
               className="text-neutral-500 hover:text-white transition-colors duration-200"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Website by Marketing Company
             </a>
             <span className="h-3 w-px bg-white/10 hidden md:block" />
             <Link href="#" className="hover:text-white transition-colors duration-200">Privacy Policy</Link>

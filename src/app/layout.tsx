@@ -17,7 +17,7 @@ const chivo = Chivo({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.a1automotive.co.uk"),
+  metadataBase: new URL("https://a1-automotive-marketing-site.vercel.app"),
   title: {
     template: "%s | A1 Automotive",
     default: "UK Vehicle Transport, Storage & PDI Services | A1 Automotive",
@@ -52,11 +52,11 @@ export const metadata: Metadata = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://www.a1automotive.co.uk",
+  "@id": "https://a1-automotive-marketing-site.vercel.app",
   name: "A1 Automotive",
   description: "Specialist vehicle transport, storage, and PDI services operating from a 12-acre HMRC-bonded hub in Bathgate, Scotland.",
-  url: "https://www.a1automotive.co.uk",
-  logo: "https://www.a1automotive.co.uk/logo.png",
+  url: "https://a1-automotive-marketing-site.vercel.app",
+  logo: "https://a1-automotive-marketing-site.vercel.app/logo.png",
   telephone: "+441506000000",
   email: "info@a1automotive.co.uk",
   address: {
@@ -75,10 +75,10 @@ const organizationSchema = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://www.a1automotive.co.uk/bathgate",
+  "@id": "https://a1-automotive-marketing-site.vercel.app/bathgate",
   name: "A1 Automotive Bathgate Hub",
   description: "HMRC-bonded vehicle storage and PDI facility in Bathgate, Scotland.",
-  url: "https://www.a1automotive.co.uk",
+  url: "https://a1-automotive-marketing-site.vercel.app",
   telephone: "+441506000000",
   address: {
     "@type": "PostalAddress",

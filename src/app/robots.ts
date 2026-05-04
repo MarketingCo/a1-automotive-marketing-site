@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/admin/"],
     },
-    sitemap: "https://www.a1automotive.co.uk/sitemap.xml",
+    sitemap: "https://a1-automotive-marketing-site.vercel.app/sitemap.xml",
   };
 }
