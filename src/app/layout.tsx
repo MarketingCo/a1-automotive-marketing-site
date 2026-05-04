@@ -17,7 +17,7 @@ const chivo = Chivo({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://a1-automotive-marketing-site.vercel.app"),
+  metadataBase: new URL('https://www.a1automotive.co.uk'),
   title: {
     template: "%s | A1 Automotive",
     default: "UK Vehicle Transport, Storage & PDI Services | A1 Automotive",
