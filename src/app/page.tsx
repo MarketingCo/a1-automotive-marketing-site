@@ -66,8 +66,8 @@ export default function Home() {
             </div>
 
             <h1 className="text-5xl md:text-[9rem] font-black text-white leading-[0.82] tracking-tighter uppercase mb-14">
-              Strategic <br />
-              <span className="text-secondary italic">Infrastructure.</span>
+              UK Vehicle <br />
+              <span className="text-secondary italic">Logistics.</span>
             </h1>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
