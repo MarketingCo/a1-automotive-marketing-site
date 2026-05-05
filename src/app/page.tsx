@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Truck, Warehouse, ShieldCheck, ArrowRight, Activity } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
-import MagneticButton from "@/components/MagneticButton";
+
 
 const services = [
   {
@@ -79,7 +79,6 @@ export default function Home() {
                 </p>
               </div>
               <div className="lg:col-span-5">
-                <MagneticButton strength={0.15}>
                   <Link href="/contact">
                     <Button
                       size="lg"
@@ -90,7 +89,6 @@ export default function Home() {
                       <ArrowRight className="ml-3 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                     </Button>
                   </Link>
-                </MagneticButton>
               </div>
             </div>
           </motion.div>

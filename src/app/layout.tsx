@@ -3,7 +3,7 @@ import { Space_Grotesk, Chivo } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import SmoothScrollProvider from "@/components/SmoothScrollProvider";
+
 import CookieBanner from "@/components/CookieBanner";
 
 const spaceGrotesk = Space_Grotesk({
@@ -133,11 +133,9 @@ export default function RootLayout({
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       </head>
       <body className={`${spaceGrotesk.variable} ${chivo.variable} font-body antialiased`}>
-        <SmoothScrollProvider>
           <Navbar />
           <main>{children}</main>
           <Footer />
-        </SmoothScrollProvider>
         <CookieBanner />
       </body>
     </html>
