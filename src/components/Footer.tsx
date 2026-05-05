@@ -104,6 +104,11 @@ export const Footer = () => {
             <Link href="#" className="hover:text-white transition-colors duration-200">Terms</Link>
           </div>
         </div>
+        <div className="mt-6 pt-6 border-t border-white/5 text-center">
+          <p className="text-sm text-neutral-500">
+            Website developed by <a href="https://marketing-company.co.uk" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-secondary/80 transition-colors duration-200 underline underline-offset-2">Marketing Company</a>
+          </p>
+        </div>
       </div>
     </footer>
   );

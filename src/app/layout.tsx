@@ -4,7 +4,6 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
-import NetworkPartners from "@/components/NetworkPartners";
 import CookieBanner from "@/components/CookieBanner";
 
 const spaceGrotesk = Space_Grotesk({
@@ -137,7 +136,6 @@ export default function RootLayout({
         <SmoothScrollProvider>
           <Navbar />
           <main>{children}</main>
-          <NetworkPartners />
           <Footer />
         </SmoothScrollProvider>
         <CookieBanner />
