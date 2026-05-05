@@ -100,7 +100,7 @@ export const Footer = () => {
           <div className="flex items-center gap-6 flex-wrap justify-center">
             <a href="tel:+441506631133" className="text-neutral-500 hover:text-white transition-colors duration-200">📞 01506 631133</a>
             <span className="h-3 w-px bg-white/10 hidden md:block" />
-            <Link href="#" className="hover:text-white transition-colors duration-200">Privacy Policy</Link>
+            <Link href="/privacy-policy" className="hover:text-white transition-colors duration-200">Privacy Policy</Link>
             <Link href="#" className="hover:text-white transition-colors duration-200">Terms</Link>
           </div>
         </div>

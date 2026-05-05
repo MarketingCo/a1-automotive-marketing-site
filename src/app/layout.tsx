@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 import NetworkPartners from "@/components/NetworkPartners";
+import CookieBanner from "@/components/CookieBanner";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -137,6 +138,7 @@ export default function RootLayout({
           <NetworkPartners />
           <Footer />
         </SmoothScrollProvider>
+        <CookieBanner />
       </body>
     </html>
   );
