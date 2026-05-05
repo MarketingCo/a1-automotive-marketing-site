@@ -45,7 +45,7 @@ export default function Home() {
       <section className="relative h-screen flex items-center bg-black overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2070&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1636500721005-775d09fae4b3?q=80&w=2070&auto=format&fit=crop"
             alt="A1 Automotive car transporter fleet on UK motorway"
             className="w-full h-full object-cover opacity-35 grayscale"
           />

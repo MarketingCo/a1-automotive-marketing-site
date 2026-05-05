@@ -44,7 +44,7 @@ export default function StoragePage() {
       <section className="relative h-[60vh] flex items-center bg-black overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1582413572771-8c45b894d712?q=80&w=2070&auto=format&fit=crop"
             alt="A1 Automotive vehicle storage facility in Bathgate"
             className="w-full h-full object-cover opacity-35 grayscale"
           />

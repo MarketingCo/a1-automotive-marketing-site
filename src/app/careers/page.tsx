@@ -27,7 +27,7 @@ export default function CareersPage() {
       <section className="relative h-[65vh] flex items-center bg-black overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1590674899484-13da0d1b58f5?q=80&w=2070&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1758549767186-7f89f3a8914e?q=80&w=2070&auto=format&fit=crop"
             alt="A1 Automotive professional HGV drivers"
             className="w-full h-full object-cover opacity-40"
           />
@@ -103,21 +103,25 @@ export default function CareersPage() {
                   type="text"
                   placeholder="Full Name"
                   autoComplete="name"
+                  aria-label="Full Name"
                   className="w-full bg-white/5 border border-white/10 px-4 py-3 text-xs font-semibold tracking-wide text-white placeholder:text-white/30 focus:outline-none focus:border-secondary transition-colors duration-150"
                 />
                 <input
                   type="text"
                   placeholder="Licence Category (e.g. Class 1 HGV)"
+                  aria-label="Licence Category"
                   className="w-full bg-white/5 border border-white/10 px-4 py-3 text-xs font-semibold tracking-wide text-white placeholder:text-white/30 focus:outline-none focus:border-secondary transition-colors duration-150"
                 />
                 <input
                   type="email"
                   placeholder="Email Address"
                   autoComplete="email"
+                  aria-label="Email Address"
                   className="w-full bg-white/5 border border-white/10 px-4 py-3 text-xs font-semibold tracking-wide text-white placeholder:text-white/30 focus:outline-none focus:border-secondary transition-colors duration-150"
                 />
                 <textarea
                   placeholder="Experience Summary"
+                  aria-label="Experience Summary"
                   rows={3}
                   className="w-full bg-white/5 border border-white/10 px-4 py-3 text-xs font-semibold tracking-wide text-white placeholder:text-white/30 focus:outline-none focus:border-secondary transition-colors duration-150 resize-none"
                 />

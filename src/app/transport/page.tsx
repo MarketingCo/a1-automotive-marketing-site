@@ -58,7 +58,7 @@ export default function TransportPage() {
       <section className="relative h-[60vh] flex items-center bg-black overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2070&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1727896908557-ee863d3008de?q=80&w=2070&auto=format&fit=crop"
             alt="A1 Automotive transporter fleet in operation"
             className="w-full h-full object-cover opacity-35 grayscale"
           />
