@@ -102,7 +102,7 @@ export default function Home() {
           <div className="flex whitespace-nowrap animate-marquee gap-0">
             {[...marqueeItems, ...marqueeItems].map((item, i) => (
               <div key={i} className="flex items-center gap-8 px-8">
-                <span className="text-[10px] font-black text-black uppercase tracking-[0.25em]">
+                <span className="text-[10px] font-black text-white uppercase tracking-[0.25em]">
                   {item.label}
                 </span>
                 <Activity size={12} className="text-black/50 shrink-0" />

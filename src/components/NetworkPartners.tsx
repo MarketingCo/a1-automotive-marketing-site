@@ -28,8 +28,8 @@ export default function NetworkPartners() {
           >
             {[...partners, ...partners].map((partner, idx) => (
               <Link key={idx} href={partner.url} target="_blank" rel="partner" className="flex-shrink-0 group">
-                <div className="flex items-center gap-3 px-5 py-3 bg-white rounded-full border border-gray-200 hover:border-red-600/30 transition-all">
-                  <span className="text-xs font-semibold text-gray-900 group-hover:text-red-600 whitespace-nowrap">{partner.name}</span>
+                <div className="flex items-center gap-3 px-5 py-3 bg-white rounded-full border border-gray-200 hover:border-secondary/30 transition-all">
+                  <span className="text-xs font-semibold text-gray-900 group-hover:text-secondary whitespace-nowrap">{partner.name}</span>
                   <span className="text-[10px] uppercase tracking-wider text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">{partner.category}</span>
                 </div>
               </Link>
