@@ -65,9 +65,10 @@ export default function Home() {
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-[9rem] font-black text-white leading-[0.82] tracking-tighter uppercase mb-14">
-              UK Vehicle <br />
-              <span className="text-secondary italic">Logistics.</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-[0.9] tracking-tighter uppercase mb-14">
+              UK Vehicle Transport, <br className="hidden md:block" />
+              Storage &amp; PDI Services | <br className="md:hidden" />
+              <span className="text-secondary italic">A1 Automotive Bathgate</span>
             </h1>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
