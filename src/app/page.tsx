@@ -34,7 +34,6 @@ const marqueeItems = [...Array(6)].flatMap(() => [
   { label: "Fleet Active: 100%" },
   { label: "Capacity: UK Wide" },
   { label: "27 Years of Reliability" },
-  { label: "FORS Gold Accredited" },
 ]);
 
 export default function Home() {
