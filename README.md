@@ -1,18 +1,27 @@
-# A1 Automotive
+# A1 Automotive Marketing Site
 
-## Brand Information
-- **Business Name:** A1 Automotive
-- **Phone:** 
-- **Email:** info@a1automotive.co.uk
-- **Address:** 12 Acre HMRC Bonded Hub, Bathgate, Scotland, EH48
-- **Domain:** https://www.a1automotive.co.uk
-- **Services:** Vehicle transport, vehicle storage, PDI services
-- **USP:** HMRC-bonded hub, 12-acre facility
+**Domain:** https://a1automotive.uk  
+**Status:** Ready for deployment  
+**Deployed:** Pending Vercel auth
 
 ## Deployment
-Deployed at: https://www.a1automotive.co.uk
 
-## Tech Stack
-- Next.js
-- Tailwind CSS
-- Vercel
+```bash
+vercel login
+vercel --prod
+```
+
+Or use Rocky:
+
+```bash
+rocky deploy a1-automotive-marketing-site
+```
+
+## SEO
+
+- robots.txt: ✅ Generated
+- sitemap.xml: ✅ Generated
+
+## Notes
+
+Managed by Rocky as Iain automation system.
