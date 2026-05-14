@@ -32,7 +32,6 @@ export default function RootLayout({
         <SmoothScrollProvider>
           <Navbar />
           <main>{children}</main>
-          <NetworkPartners />
           <Footer />
         </SmoothScrollProvider>
       </body>
