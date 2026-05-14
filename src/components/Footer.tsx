@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="bg-black text-neutral-400 border-t border-white/10">
+    <footer className="bg-[#1a1a1a] text-neutral-400 border-t border-white/10">
       <div className="container mx-auto px-6 py-16">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
 
@@ -98,18 +98,16 @@ export const Footer = () => {
         <div className="mt-14 border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-5 text-[10px] font-bold uppercase tracking-[0.25em]">
           <p>© {new Date().getFullYear()} A1 Automotive Ltd. All rights reserved.</p>
           <div className="flex items-center gap-6 flex-wrap justify-center">
-            <a
-              href="https://marketing-company.co.uk"
-              className="text-neutral-500 hover:text-white transition-colors duration-200"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Website by Marketing Company
-            </a>
+            <a href="tel:+441506631133" className="text-neutral-500 hover:text-white transition-colors duration-200">📞 01506 631133</a>
             <span className="h-3 w-px bg-white/10 hidden md:block" />
-            <Link href="#" className="hover:text-white transition-colors duration-200">Privacy Policy</Link>
+            <Link href="/privacy-policy" className="hover:text-white transition-colors duration-200">Privacy Policy</Link>
             <Link href="#" className="hover:text-white transition-colors duration-200">Terms</Link>
           </div>
+        </div>
+        <div className="mt-6 pt-6 border-t border-white/5 text-center">
+          <p className="text-sm text-neutral-500">
+            Website developed by <a href="https://marketing-company.co.uk" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-secondary/80 transition-colors duration-200 underline underline-offset-2">Marketing Company</a>
+          </p>
         </div>
       </div>
     </footer>

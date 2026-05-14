@@ -36,23 +36,24 @@ export const QuoteForm = ({ service = "GENERAL LOGISTICS", dark = false }: Quote
       <form className="space-y-5">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div>
-            <label className={labelClass}>Your Name</label>
-            <input type="text" autoComplete="name" className={inputClass} />
+            <label htmlFor="quote-name" className={labelClass}>Your Name</label>
+            <input id="quote-name" type="text" autoComplete="name" className={inputClass} />
           </div>
           <div>
-            <label className={labelClass}>Company Name</label>
-            <input type="text" autoComplete="organization" className={inputClass} />
+            <label htmlFor="quote-company" className={labelClass}>Company Name</label>
+            <input id="quote-company" type="text" autoComplete="organization" className={inputClass} />
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div>
-            <label className={labelClass}>Work Email</label>
-            <input type="email" autoComplete="email" className={inputClass} />
+            <label htmlFor="quote-email" className={labelClass}>Work Email</label>
+            <input id="quote-email" type="email" autoComplete="email" className={inputClass} />
           </div>
           <div>
-            <label className={labelClass}>Service Required</label>
+            <label htmlFor="quote-service" className={labelClass}>Service Required</label>
             <select
+              id="quote-service"
               defaultValue={service}
               className={cn(inputClass, "appearance-none cursor-pointer")}
             >
@@ -65,8 +66,9 @@ export const QuoteForm = ({ service = "GENERAL LOGISTICS", dark = false }: Quote
         </div>
 
         <div>
-          <label className={labelClass}>Enquiry Details</label>
+          <label htmlFor="quote-details" className={labelClass}>Enquiry Details</label>
           <textarea
+            id="quote-details"
             rows={4}
             className={cn(inputClass, "resize-none")}
           />

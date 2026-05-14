@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Truck, Warehouse, ShieldCheck, ArrowRight, Activity } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
-import MagneticButton from "@/components/MagneticButton";
+
 
 const services = [
   {
@@ -34,7 +34,6 @@ const marqueeItems = [...Array(6)].flatMap(() => [
   { label: "Fleet Active: 100%" },
   { label: "Capacity: UK Wide" },
   { label: "27 Years of Reliability" },
-  { label: "FORS Gold Accredited" },
 ]);
 
 export default function Home() {
@@ -45,7 +44,7 @@ export default function Home() {
       <section className="relative h-screen flex items-center bg-black overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2070&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1636500721005-775d09fae4b3?q=80&w=2070&auto=format&fit=crop"
             alt="A1 Automotive car transporter fleet on UK motorway"
             className="w-full h-full object-cover opacity-35 grayscale"
           />
@@ -65,9 +64,10 @@ export default function Home() {
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-[9rem] font-black text-white leading-[0.82] tracking-tighter uppercase mb-14">
-              Strategic <br />
-              <span className="text-secondary italic">Infrastructure.</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-[0.9] tracking-tighter uppercase mb-14">
+              UK Vehicle Transport, <br className="hidden md:block" />
+              Storage &amp; PDI Services | <br className="md:hidden" />
+              <span className="text-secondary italic">A1 Automotive Bathgate</span>
             </h1>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
@@ -79,7 +79,6 @@ export default function Home() {
                 </p>
               </div>
               <div className="lg:col-span-5">
-                <MagneticButton strength={0.15}>
                   <Link href="/contact">
                     <Button
                       size="lg"
@@ -90,7 +89,6 @@ export default function Home() {
                       <ArrowRight className="ml-3 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                     </Button>
                   </Link>
-                </MagneticButton>
               </div>
             </div>
           </motion.div>
@@ -101,7 +99,7 @@ export default function Home() {
           <div className="flex whitespace-nowrap animate-marquee gap-0">
             {[...marqueeItems, ...marqueeItems].map((item, i) => (
               <div key={i} className="flex items-center gap-8 px-8">
-                <span className="text-[10px] font-black text-black uppercase tracking-[0.25em]">
+                <span className="text-[10px] font-black text-white uppercase tracking-[0.25em]">
                   {item.label}
                 </span>
                 <Activity size={12} className="text-black/50 shrink-0" />
