@@ -20,13 +20,13 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://a1automotive.co.uk'),
   title: {
     template: "%s | A1 Automotive",
-    default: "UK Vehicle Transport, Storage & PDI Services | A1 Automotive Bathgate",
+    default: "Vehicle Transport & Storage | A1 Automotive",
   },
   description: "Professional UK vehicle transport, secure HMRC bonded vehicle storage, PDI services, defleet management and fleet logistics. Operating from our 12-acre hub in Bathgate, Scotland since 1998. Serving manufacturers, leasing companies and fleet operators nationwide.",
   keywords: ["vehicle transport UK", "car transport Scotland", "vehicle storage Scotland", "HMRC bonded vehicle storage", "PDI services UK", "fleet logistics UK", "car transporter hire UK", "vehicle defleet services", "vehicle logistics UK", "car storage Bathgate", "automotive transport Scotland"],
   alternates: { canonical: "https://a1automotive.co.uk/" },
   openGraph: {
-    title: "UK Vehicle Transport, Storage & PDI Services | A1 Automotive Bathgate",
+    title: "Vehicle Transport & Storage | A1 Automotive",
     description: "Professional UK vehicle transport, secure HMRC bonded vehicle storage, PDI services, defleet management and fleet logistics from our 12-acre hub in Bathgate, Scotland.",
     url: "https://a1automotive.co.uk/",
     siteName: "A1 Automotive",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "UK Vehicle Transport, Storage & PDI Services | A1 Automotive Bathgate",
+    title: "Vehicle Transport & Storage | A1 Automotive",
     description: "Professional UK vehicle transport, secure HMRC bonded vehicle storage, PDI services, defleet management and fleet logistics from our 12-acre hub in Bathgate, Scotland.",
     images: ["https://a1-automotive-marketing-site.vercel.app/og-image.jpg"],
   },
