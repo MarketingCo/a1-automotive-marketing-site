@@ -99,7 +99,7 @@ export default function Home() {
           <div className="flex whitespace-nowrap animate-marquee gap-0">
             {[...marqueeItems, ...marqueeItems].map((item, i) => (
               <div key={i} className="flex items-center gap-8 px-8">
-                <span className="text-[10px] font-black text-white uppercase tracking-[0.25em]">
+                <span className="text-sm font-medium text-white uppercase">
                   {item.label}
                 </span>
                 <Activity size={12} className="text-black/50 shrink-0" />
@@ -153,7 +153,7 @@ export default function Home() {
                         {s.desc}
                       </p>
                     </div>
-                    <div className="mt-10 flex items-center gap-3 text-[10px] font-black text-secondary uppercase tracking-[0.3em] opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300">
+                    <div className="mt-10 flex items-center gap-3 text-sm font-medium text-secondary uppercase opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300">
                       Explore <ArrowRight size={12} />
                     </div>
                   </div>
@@ -175,7 +175,7 @@ export default function Home() {
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
             >
-              <span className="text-[10px] font-black text-secondary uppercase tracking-[0.4em] mb-10 block">
+              <span className="text-sm font-medium text-secondary uppercase mb-10 block">
                 The Hub / Bathgate, Scotland
               </span>
               <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.82] mb-12">
@@ -188,11 +188,11 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-8">
                 <div>
                   <div className="text-5xl font-black mb-1.5 tabular-nums">2,000+</div>
-                  <div className="text-[10px] font-black uppercase tracking-[0.25em] text-secondary">Unit Capacity</div>
+                  <div className="text-sm font-medium uppercase text-secondary">Unit Capacity</div>
                 </div>
                 <div>
                   <div className="text-5xl font-black mb-1.5 tabular-nums">24/7</div>
-                  <div className="text-[10px] font-black uppercase tracking-[0.25em] text-secondary">Secured Site</div>
+                  <div className="text-sm font-medium uppercase text-secondary">Secured Site</div>
                 </div>
               </div>
             </motion.div>
@@ -247,7 +247,7 @@ export default function Home() {
                   </Button>
                 </Link>
                 <div className="flex flex-col items-start text-left">
-                  <span className="text-[10px] font-black text-black/40 uppercase tracking-[0.25em] mb-1">
+                  <span className="text-sm font-medium text-black/60 uppercase mb-1">
                     Direct Hotline
                   </span>
                   <a
