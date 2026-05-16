@@ -72,7 +72,7 @@ export default function Home() {
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
               <div className="lg:col-span-7">
-                <p className="text-xl md:text-3xl font-black text-white/35 leading-none uppercase tracking-tighter border-l-[6px] border-secondary pl-8">
+                <p className="text-xl md:text-3xl font-black text-white/35 leading-none uppercase tracking-tighter border-t-[6px] border-secondary pt-8">
                   80+ Transporters. <br />
                   12-Acre Secure Hub. <br />
                   27 Years of Reliability.
@@ -246,7 +246,7 @@ export default function Home() {
                     Open an Enquiry
                   </Button>
                 </Link>
-                <div className="flex flex-col items-start border-l-2 border-black/10 pl-8 text-left">
+                <div className="flex flex-col items-start text-left">
                   <span className="text-[10px] font-black text-black/40 uppercase tracking-[0.25em] mb-1">
                     Direct Hotline
                   </span>
