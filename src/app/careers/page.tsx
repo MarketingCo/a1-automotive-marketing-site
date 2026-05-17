@@ -11,10 +11,9 @@ const benefits = [
 ];
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 18 },
+  hidden: { opacity: 0 },
   visible: (i = 0) => ({
     opacity: 1,
-    y: 0,
     transition: { duration: 0.65, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] },
   }),
 };
@@ -37,11 +36,11 @@ export default function CareersPage() {
         <div className="container relative z-10 px-6 mx-auto">
           <motion.div
             className="max-w-4xl"
-            initial={{ opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
           >
-            <span className="text-[10px] font-black text-secondary uppercase tracking-[0.4em] mb-6 block">
+            <span className="text-sm font-medium text-secondary mb-6 block">
               Operational Growth
             </span>
             <h1 className="text-5xl md:text-9xl font-black text-white uppercase tracking-tighter leading-[0.82] mb-10">
@@ -75,7 +74,7 @@ export default function CareersPage() {
                 {benefits.map((b, i) => (
                   <motion.div
                     key={b.t}
-                    className="group border-l-2 border-neutral-100 pl-5 hover:border-secondary transition-colors duration-200"
+                    className="group border-t-2 border-neutral-100 pt-5 hover:border-secondary transition-colors duration-200"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
@@ -83,7 +82,7 @@ export default function CareersPage() {
                     custom={i * 0.5}
                   >
                     <h4 className="font-black uppercase tracking-tight text-black mb-1.5">{b.t}</h4>
-                    <p className="text-[10px] font-semibold text-neutral-400 uppercase tracking-[0.15em] leading-relaxed">{b.d}</p>
+                    <p className="text-sm font-medium text-neutral-500 leading-relaxed">{b.d}</p>
                   </motion.div>
                 ))}
               </div>
@@ -140,7 +139,7 @@ export default function CareersPage() {
       {/* Direct line */}
       <section className="py-16 bg-neutral-50 border-y border-neutral-200">
         <div className="container mx-auto px-6 text-center">
-          <span className="text-[10px] font-black text-neutral-400 uppercase tracking-[0.35em] mb-3 block">
+          <span className="text-sm font-medium text-neutral-500 mb-3 block">
             Direct Career Enquiries
           </span>
           <a

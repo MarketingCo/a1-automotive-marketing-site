@@ -50,7 +50,7 @@ export default function ContactForm() {
             />
           ))}
         </div>
-        <span className="text-[10px] font-black uppercase tracking-[0.3em] text-black/30">Protocol Step 0{step}</span>
+        <span className="text-sm font-medium text-black/30">Protocol Step 0{step}</span>
       </div>
 
       <form onSubmit={handleSubmit} className="min-h-[400px] flex flex-col justify-between text-left">
@@ -103,7 +103,7 @@ export default function ContactForm() {
               <h4 className="text-2xl font-black uppercase tracking-tighter text-black">Project Scale</h4>
               <div className="space-y-8">
                 <div>
-                  <label htmlFor="fleet" className="text-[10px] font-black text-black/30 uppercase tracking-[0.4em] mb-3 block">Estimated Fleet Size / Units</label>
+                  <label htmlFor="fleet" className="text-sm font-medium text-black/30 mb-3 block">Estimated Fleet Size / Units</label>
                   <input
                     id="fleet"
                     type="text"
@@ -114,7 +114,7 @@ export default function ContactForm() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="location" className="text-[10px] font-black text-black/30 uppercase tracking-[0.4em] mb-3 block">Primary Route / Destination</label>
+                  <label htmlFor="location" className="text-sm font-medium text-black/30 mb-3 block">Primary Route / Destination</label>
                   <input
                     id="location"
                     type="text"
@@ -125,8 +125,8 @@ export default function ContactForm() {
                 </div>
               </div>
               <div className="flex justify-between items-center pt-6">
-                <button type="button" onClick={prevStep} className="text-[10px] font-black uppercase tracking-[0.3em] text-black/30 hover:text-black transition-colors">← Return</button>
-                <button type="button" onClick={nextStep} className="text-[10px] font-black uppercase tracking-[0.3em] text-secondary hover:text-black transition-colors">Continue →</button>
+                <button type="button" onClick={prevStep} className="text-sm font-medium text-black/30 hover:text-black transition-colors">← Return</button>
+                <button type="button" onClick={nextStep} className="text-sm font-medium text-secondary hover:text-black transition-colors">Continue →</button>
               </div>
             </motion.div>
           )}
@@ -143,7 +143,7 @@ export default function ContactForm() {
               <h4 className="text-2xl font-black uppercase tracking-tighter text-black">Auth Verification</h4>
               <div className="grid grid-cols-1 gap-8">
                 <div>
-                  <label htmlFor="name" className="text-[10px] font-black text-black/30 uppercase tracking-[0.4em] mb-3 block">Contact Name / Operations Lead</label>
+                  <label htmlFor="name" className="text-sm font-medium text-black/30 mb-3 block">Contact Name / Operations Lead</label>
                   <input
                     id="name"
                     type="text"
@@ -153,7 +153,7 @@ export default function ContactForm() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="text-[10px] font-black text-black/30 uppercase tracking-[0.4em] mb-3 block">Corporate Email Address</label>
+                  <label htmlFor="email" className="text-sm font-medium text-black/30 mb-3 block">Corporate Email Address</label>
                   <input
                     id="email"
                     type="email"
@@ -161,11 +161,11 @@ export default function ContactForm() {
                     required
                     className="w-full bg-gray-50 border border-black/10 p-5 font-black text-black focus:border-secondary outline-none transition-all uppercase tracking-widest text-xs"
                   />
-                  <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-500 text-[10px] font-bold mt-2" />
+                  <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-500 text-sm font-medium mt-2" />
                 </div>
               </div>
               <div className="flex justify-between items-center pt-10">
-                <button type="button" onClick={prevStep} className="text-[10px] font-black uppercase tracking-[0.3em] text-black/30 hover:text-black transition-colors">← Return</button>
+                <button type="button" onClick={prevStep} className="text-sm font-medium text-black/30 hover:text-black transition-colors">← Return</button>
                 <button
                   type="submit"
                   disabled={state.submitting}

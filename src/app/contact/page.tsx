@@ -5,10 +5,9 @@ import { Phone, Mail, MapPin, ShieldCheck } from "lucide-react";
 import { QuoteForm } from "@/components/QuoteForm";
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 18 },
+  hidden: { opacity: 0 },
   visible: (i = 0) => ({
     opacity: 1,
-    y: 0,
     transition: { duration: 0.65, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] },
   }),
 };
@@ -29,8 +28,8 @@ export default function ContactPage() {
         <div className="container relative z-10 px-6 mx-auto">
           <motion.h1
             className="text-5xl md:text-8xl font-black text-white uppercase tracking-tighter leading-[0.85]"
-            initial={{ opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
           >
             Contact <br />
@@ -67,7 +66,7 @@ export default function ContactPage() {
                     <Phone size={24} strokeWidth={1.5} />
                   </div>
                   <div>
-                    <span className="text-[10px] font-black text-neutral-400 uppercase tracking-[0.2em] mb-1.5 block">
+                    <span className="text-sm font-medium text-neutral-500 mb-1.5 block">
                       Direct Hotline
                     </span>
                     <a
@@ -76,7 +75,7 @@ export default function ContactPage() {
                     >
                       01506 631133
                     </a>
-                    <p className="text-[10px] font-bold text-secondary uppercase tracking-tight mt-1.5">
+                    <p className="text-sm font-medium text-secondary mt-1.5">
                       2-Hour Enquiry Response
                     </p>
                   </div>
@@ -87,7 +86,7 @@ export default function ContactPage() {
                     <Mail size={24} strokeWidth={1.5} />
                   </div>
                   <div>
-                    <span className="text-[10px] font-black text-neutral-400 uppercase tracking-[0.2em] mb-1.5 block">
+                    <span className="text-sm font-medium text-neutral-500 mb-1.5 block">
                       Enquiry Inbox
                     </span>
                     <a
@@ -96,7 +95,7 @@ export default function ContactPage() {
                     >
                       info@a1automotive.co.uk
                     </a>
-                    <p className="text-[10px] font-bold text-neutral-400 uppercase tracking-tight mt-1.5">
+                    <p className="text-sm font-medium text-neutral-500 mt-1.5">
                       Corporate &amp; Fleet Enquiries
                     </p>
                   </div>
@@ -107,7 +106,7 @@ export default function ContactPage() {
                     <MapPin size={24} strokeWidth={1.5} />
                   </div>
                   <div>
-                    <span className="text-[10px] font-black text-neutral-400 uppercase tracking-[0.2em] mb-1.5 block">
+                    <span className="text-sm font-medium text-neutral-500 mb-1.5 block">
                       Headquarters
                     </span>
                     <address className="text-lg font-bold text-black not-italic leading-snug">
@@ -121,13 +120,13 @@ export default function ContactPage() {
 
               <div className="pt-8 border-t border-neutral-100 flex items-center gap-8 opacity-30">
                 <ShieldCheck size={36} strokeWidth={1.5} />
-                <div className="text-[10px] font-black uppercase tracking-[0.2em] leading-snug">
+                <div className="text-sm font-medium leading-snug">
                   FORS Gold<br />Accredited
                 </div>
-                <div className="text-[10px] font-black uppercase tracking-[0.2em] leading-snug">
+                <div className="text-sm font-medium leading-snug">
                   RHA<br />Member
                 </div>
-                <div className="text-[10px] font-black uppercase tracking-[0.2em] leading-snug">
+                <div className="text-sm font-medium leading-snug">
                   Established<br />1998
                 </div>
               </div>
@@ -154,7 +153,7 @@ export default function ContactPage() {
           <h4 className="text-xl font-black uppercase tracking-tighter mb-1.5 text-black">
             Find Us in Bathgate
           </h4>
-          <p className="text-[10px] font-bold text-neutral-400 uppercase tracking-[0.35em]">
+          <p className="text-sm font-medium text-neutral-500">
             Strategically positioned for UK-wide logistics
           </p>
         </div>

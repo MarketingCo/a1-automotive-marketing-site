@@ -64,7 +64,7 @@ export const Navbar = () => {
           <span className="text-secondary">1</span>
           <span
             className={cn(
-              "ml-3 text-[10px] font-black uppercase tracking-[0.3em] hidden sm:inline transition-colors duration-300",
+              "ml-3 text-sm font-medium hidden sm:inline transition-colors duration-300",
               scrolled ? "text-black/40" : "text-black/40 lg:text-white/40"
             )}
           >
@@ -102,7 +102,7 @@ export const Navbar = () => {
                         <Link
                           key={sub.name}
                           href={sub.href}
-                          className="text-[10px] font-black text-white/50 hover:text-secondary uppercase tracking-[0.15em] transition-colors duration-150"
+                          className="text-sm font-medium text-white/50 hover:text-secondary transition-colors duration-150"
                         >
                           {sub.name}
                         </Link>
@@ -117,7 +117,7 @@ export const Navbar = () => {
             <Button
               variant="secondary"
               size="sm"
-              className="rounded-none px-7 font-black tracking-[0.15em] text-[10px] h-9 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+              className="rounded-none px-7 text-sm font-medium h-9 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
             >
               Get a Quote
             </Button>
@@ -156,7 +156,7 @@ export const Navbar = () => {
                 {link.name}
               </Link>
               {link.dropdown && (
-                <div className="flex flex-col gap-4 pl-6 border-l-2 border-secondary">
+                <div className="flex flex-col gap-4 pt-6 border-t-2 border-secondary">
                   {link.dropdown.map((sub) => (
                     <Link
                       key={sub.name}

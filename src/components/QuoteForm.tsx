@@ -18,7 +18,7 @@ export const QuoteForm = ({ service = "GENERAL LOGISTICS", dark = false }: Quote
   );
 
   const labelClass =
-    "block text-[10px] font-black uppercase tracking-[0.2em] mb-1.5 " +
+    "block text-sm font-medium mb-1.5 " +
     (dark ? "text-white/40" : "text-neutral-400");
 
   return (
@@ -29,7 +29,7 @@ export const QuoteForm = ({ service = "GENERAL LOGISTICS", dark = false }: Quote
       )}
     >
       <h3 className="text-xl font-black uppercase tracking-tight mb-1">Request a Quote</h3>
-      <p className={cn("text-[10px] font-bold uppercase tracking-[0.2em] mb-8", dark ? "text-white/30" : "text-neutral-400")}>
+      <p className={cn("text-sm font-medium mb-8", dark ? "text-white/30" : "text-neutral-400")}>
         Response within 2 business hours
       </p>
 

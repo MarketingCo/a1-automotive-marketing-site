@@ -85,17 +85,17 @@ export const Footer = () => {
               Accreditation
             </h3>
             <div className="flex flex-wrap gap-3">
-              <div className="h-12 w-20 rounded-sm bg-white/5 flex items-center justify-center text-[10px] font-black border border-white/10 text-white uppercase tracking-widest hover:border-secondary/50 transition-colors duration-300">
+              <div className="h-12 w-20 rounded-sm bg-white/5 flex items-center justify-center text-sm font-medium border border-white/10 text-white hover:border-secondary/50 transition-colors duration-300">
                 RHA
               </div>
-              <div className="h-12 w-20 rounded-sm bg-white/5 flex items-center justify-center text-[10px] font-black border border-white/10 text-white uppercase tracking-widest text-center leading-tight hover:border-secondary/50 transition-colors duration-300">
+              <div className="h-12 w-20 rounded-sm bg-white/5 flex items-center justify-center text-sm font-medium border border-white/10 text-white text-center leading-tight hover:border-secondary/50 transition-colors duration-300">
                 FORS<br />GOLD
               </div>
             </div>
           </div>
         </div>
 
-        <div className="mt-14 border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-5 text-[10px] font-bold uppercase tracking-[0.25em]">
+        <div className="mt-14 border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-5 text-sm font-medium">
           <p>© {new Date().getFullYear()} A1 Automotive Ltd. All rights reserved.</p>
           <div className="flex items-center gap-6 flex-wrap justify-center">
             <a href="tel:+441506631133" className="text-neutral-500 hover:text-white transition-colors duration-200">📞 01506 631133</a>

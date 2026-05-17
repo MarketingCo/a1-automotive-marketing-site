@@ -53,13 +53,13 @@ export default function Home() {
 
         <div className="container relative z-10 px-6 mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 28 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
           >
             <div className="flex items-center gap-5 mb-10">
               <div className="h-px w-16 bg-secondary" />
-              <span className="text-[10px] md:text-xs font-black tracking-[0.4em] text-white/70 uppercase">
+              <span className="text-sm font-medium text-white/70">
                 National Vehicle Logistics
               </span>
             </div>
@@ -113,8 +113,8 @@ export default function Home() {
       <section id="services" className="py-36 bg-white">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
             className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8"
@@ -122,7 +122,7 @@ export default function Home() {
             <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-black leading-none">
               Our <span className="text-secondary italic">Core.</span>
             </h2>
-            <p className="text-black/30 font-bold uppercase tracking-[0.2em] text-[10px] max-w-xs text-right leading-relaxed">
+            <p className="text-sm font-medium text-black/30 max-w-xs text-right leading-relaxed">
               Mission-critical logistical support for the UK automotive economy.
             </p>
           </motion.div>
@@ -131,8 +131,8 @@ export default function Home() {
             {services.map((s, i) => (
               <motion.div
                 key={s.id}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.6, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
               >
@@ -149,7 +149,7 @@ export default function Home() {
                       <h3 className="text-3xl font-black uppercase tracking-tighter text-black group-hover:text-white transition-colors duration-500 mb-4">
                         {s.title}
                       </h3>
-                      <p className="text-black/40 font-semibold uppercase text-[10px] tracking-[0.2em] group-hover:text-white/40 transition-colors duration-500 leading-relaxed">
+                      <p className="text-sm font-medium text-black/40 group-hover:text-white/40 transition-colors duration-500 leading-relaxed">
                         {s.desc}
                       </p>
                     </div>
@@ -211,7 +211,7 @@ export default function Home() {
                   className="text-secondary group-hover:text-white transition-colors duration-400 relative z-10"
                   strokeWidth={0.75}
                 />
-                <span className="absolute bottom-8 left-8 text-xs font-black uppercase tracking-[0.3em] opacity-20 group-hover:opacity-100 group-hover:text-white transition-all duration-300">
+                <span className="absolute bottom-8 left-8 text-sm font-medium opacity-20 group-hover:opacity-100 group-hover:text-white transition-all duration-300">
                   Hub Specs
                 </span>
               </div>
@@ -224,8 +224,8 @@ export default function Home() {
       <section className="py-52 bg-[#f5f5f5] text-center">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
           >

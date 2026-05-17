@@ -28,7 +28,7 @@ export default function BlogPost({ post }: BlogPostProps) {
         >
           <Link
             href="/blog"
-            className="inline-flex items-center text-[10px] uppercase tracking-widest font-black text-black/40 hover:text-secondary transition-colors"
+            className="inline-flex items-center text-sm font-medium text-black/40 hover:text-secondary transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Insights
@@ -37,20 +37,20 @@ export default function BlogPost({ post }: BlogPostProps) {
 
         {/* Header */}
         <motion.header
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
           <div className="flex items-center gap-4 mb-6">
-            <span className="bg-secondary text-white text-[8px] uppercase tracking-widest font-black px-3 py-1.5">
+            <span className="bg-secondary text-white text-xs font-medium px-3 py-1.5">
               {post.category}
             </span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter mb-8 leading-[0.95]">
             {post.title}
           </h1>
-          <div className="flex items-center gap-6 text-[10px] uppercase tracking-widest font-black text-black/40">
+          <div className="flex items-center gap-6 text-sm font-medium text-black/40">
             <span className="flex items-center">
               <Calendar className="w-3 h-3 mr-2" /> {post.date}
             </span>
@@ -62,8 +62,8 @@ export default function BlogPost({ post }: BlogPostProps) {
 
         {/* Featured Image */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="mb-12"
         >
@@ -76,8 +76,8 @@ export default function BlogPost({ post }: BlogPostProps) {
 
         {/* Content */}
         <motion.article
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="prose prose-lg max-w-none"
           dangerouslySetInnerHTML={{ __html: post.content }}
@@ -85,8 +85,8 @@ export default function BlogPost({ post }: BlogPostProps) {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-16 pt-12 border-t border-black/10"
         >
@@ -99,7 +99,7 @@ export default function BlogPost({ post }: BlogPostProps) {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center bg-black text-white text-[10px] uppercase tracking-widest font-black px-8 py-4 hover:bg-secondary transition-colors"
+              className="inline-flex items-center bg-black text-white text-sm font-medium px-8 py-4 hover:bg-secondary transition-colors"
             >
               Request a Proposal
             </Link>

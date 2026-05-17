@@ -42,10 +42,9 @@ const transporterTypes = [
 ];
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 18 },
+  hidden: { opacity: 0 },
   visible: (i = 0) => ({
     opacity: 1,
-    y: 0,
     transition: { duration: 0.65, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] },
   }),
 };
@@ -68,11 +67,11 @@ export default function TransportPage() {
         <div className="container relative z-10 px-6 mx-auto">
           <motion.div
             className="max-w-4xl"
-            initial={{ opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
           >
-            <span className="text-[10px] font-black text-secondary uppercase tracking-[0.4em] mb-6 block">
+            <span className="text-sm font-medium text-secondary mb-6 block">
               Service Division 01
             </span>
             <h1 className="text-5xl md:text-8xl font-black text-white uppercase tracking-tighter leading-[0.85] mb-6">
@@ -129,7 +128,7 @@ export default function TransportPage() {
                   className="bg-neutral-50 p-10 flex flex-col justify-center border-t-4 border-black hover:border-secondary transition-colors duration-300"
                 >
                   <div className="text-5xl font-black mb-2 tabular-nums">{item.stat}</div>
-                  <div className="text-[10px] font-black uppercase tracking-[0.25em] text-secondary">
+                  <div className="text-sm font-medium text-secondary">
                     {item.label}
                   </div>
                 </div>
@@ -164,11 +163,11 @@ export default function TransportPage() {
                 variants={fadeUp}
                 custom={i}
               >
-                <div className="text-[10px] font-black text-secondary mb-10 uppercase tracking-[0.25em]">
+                <div className="text-sm font-medium text-secondary mb-10">
                   {type.id}
                 </div>
                 <h3 className="text-2xl font-black uppercase tracking-tight mb-2">{type.name}</h3>
-                <p className="text-[10px] font-black text-neutral-400 uppercase tracking-[0.2em] mb-8">
+                <p className="text-sm font-medium text-neutral-500 mb-8">
                   {type.capacity}
                 </p>
                 <ul className="space-y-3 mb-12">
@@ -179,7 +178,7 @@ export default function TransportPage() {
                     </li>
                   ))}
                 </ul>
-                <p className="text-[10px] font-semibold uppercase tracking-[0.1em] text-neutral-300 group-hover:text-neutral-500 transition-colors duration-300 italic leading-relaxed">
+                <p className="text-sm font-medium text-neutral-400 group-hover:text-neutral-600 transition-colors duration-300 leading-relaxed">
                   {type.use}
                 </p>
               </motion.div>

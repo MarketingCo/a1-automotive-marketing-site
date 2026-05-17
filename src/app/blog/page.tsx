@@ -58,11 +58,11 @@ export default function BlogPage() {
       <div className="container mx-auto px-6 max-w-7xl">
         <header className="mb-20 text-center max-w-3xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-[10px] font-black tracking-[0.4em] text-secondary uppercase mb-6 block">
+            <span className="text-sm font-medium text-secondary mb-6 block">
               Industry Intelligence
             </span>
             <h1 className="text-5xl md:text-7xl font-black uppercase mb-8 tracking-tighter">
@@ -78,8 +78,8 @@ export default function BlogPage() {
           {blogPosts.map((post, idx) => (
             <motion.article
               key={post.slug}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
               className="group flex flex-col bg-[#f9f9f9] overflow-hidden hover:bg-black transition-all duration-500"
@@ -91,13 +91,13 @@ export default function BlogPage() {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="bg-secondary text-white text-[8px] uppercase tracking-widest font-black px-3 py-1.5">
+                  <span className="bg-secondary text-white text-xs font-medium px-3 py-1.5">
                     {post.category}
                   </span>
                 </div>
               </Link>
               <div className="p-8 flex-grow flex flex-col">
-                <div className="flex items-center space-x-4 text-[10px] uppercase tracking-widest font-black text-black/40 mb-4 group-hover:text-white/40 transition-colors">
+                <div className="flex items-center space-x-4 text-sm font-medium text-black/40 mb-4 group-hover:text-white/40 transition-colors">
                   <span className="flex items-center"><Calendar className="w-3 h-3 mr-2" /> {post.date}</span>
                   <span className="flex items-center"><User className="w-3 h-3 mr-2" /> {post.author}</span>
                 </div>
@@ -109,7 +109,7 @@ export default function BlogPage() {
                 </p>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="mt-auto inline-flex items-center text-[10px] uppercase tracking-widest font-black text-secondary group-hover:text-secondary border-b-2 border-secondary pb-1 w-max"
+                  className="mt-auto inline-flex items-center text-sm font-medium text-secondary group-hover:text-secondary border-b-2 border-secondary pb-1 w-max"
                 >
                   Read Article <ArrowRight className="ml-2 w-3 h-3 group-hover:translate-x-1 transition-transform" />
                 </Link>

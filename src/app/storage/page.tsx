@@ -28,10 +28,9 @@ const storageFeatures = [
 ];
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 18 },
+  hidden: { opacity: 0 },
   visible: (i = 0) => ({
     opacity: 1,
-    y: 0,
     transition: { duration: 0.65, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] },
   }),
 };
@@ -54,11 +53,11 @@ export default function StoragePage() {
         <div className="container relative z-10 px-6 mx-auto">
           <motion.div
             className="max-w-4xl"
-            initial={{ opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
           >
-            <span className="text-[10px] font-black text-secondary uppercase tracking-[0.4em] mb-6 block">
+            <span className="text-sm font-medium text-secondary mb-6 block">
               Service Division 02
             </span>
             <h1 className="text-5xl md:text-8xl font-black text-white uppercase tracking-tighter leading-[0.85] mb-6">
@@ -100,7 +99,7 @@ export default function StoragePage() {
               {storageFeatures.map((f, i) => (
                 <motion.div
                   key={f.title}
-                  className="p-8 bg-neutral-50 border-l-4 border-secondary group hover:bg-black transition-colors duration-400"
+                  className="p-8 bg-neutral-50 border-t-4 border-secondary group hover:bg-black transition-colors duration-400"
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, margin: "-40px" }}
@@ -115,7 +114,7 @@ export default function StoragePage() {
                   <h4 className="text-lg font-black uppercase tracking-tight mb-2.5 text-black group-hover:text-white transition-colors duration-400">
                     {f.title}
                   </h4>
-                  <p className="text-[10px] font-semibold text-neutral-400 uppercase tracking-[0.15em] group-hover:text-white/40 transition-colors duration-400 leading-relaxed">
+                  <p className="text-sm font-medium text-neutral-500 group-hover:text-white/50 transition-colors duration-400 leading-relaxed">
                     {f.desc}
                   </p>
                 </motion.div>
@@ -146,11 +145,11 @@ export default function StoragePage() {
               <div className="grid grid-cols-2 gap-8">
                 <div>
                   <div className="text-4xl font-black tabular-nums mb-1.5">2,000+</div>
-                  <div className="text-[10px] font-black uppercase tracking-[0.25em] text-secondary">Unit Capacity</div>
+                  <div className="text-sm font-medium text-secondary">Unit Capacity</div>
                 </div>
                 <div>
                   <div className="text-4xl font-black tabular-nums mb-1.5">HMRC</div>
-                  <div className="text-[10px] font-black uppercase tracking-[0.25em] text-secondary">Bonded Status</div>
+                  <div className="text-sm font-medium text-secondary">Bonded Status</div>
                 </div>
               </div>
             </motion.div>
